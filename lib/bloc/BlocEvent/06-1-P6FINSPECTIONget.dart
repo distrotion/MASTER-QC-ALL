@@ -1424,10 +1424,13 @@ class P6FINSPECTIONget_Bloc
               CONIP: databuff[0]['INPROCESS'][i]['CONIP'] != null
                   ? databuff[0]['INPROCESS'][i]['CONIP'].toString()
                   : '',
-              CONIPITEM: findITEMs_FNconv(
+              CONIPITEMNAME: findITEMs_FNconv(
                   databuff[0]['INPROCESS'][i]['CONIPITEM'] != null
                       ? databuff[0]['INPROCESS'][i]['CONIPITEM'].toString()
                       : ''),
+              CONIPITEM: databuff[0]['INPROCESS'][i]['CONIPITEM'] != null
+                  ? databuff[0]['INPROCESS'][i]['CONIPITEM'].toString()
+                  : '',
 
               CONIPITEMVAR: databuff[0]['INPROCESS'][i]['CONIPITEMVAR'] != null
                   ? databuff[0]['INPROCESS'][i]['CONIPITEMVAR'].toString()
@@ -1546,6 +1549,7 @@ class speckSTD {
     this.AQL = '',
     this.AQLV = '',
     this.CONIP = '',
+    this.CONIPITEMNAME = '',
     this.CONIPITEM = '',
     this.CONIPITEMVAR = '',
   });
@@ -1602,6 +1606,7 @@ class speckSTD {
   String AQLV;
 
   String CONIP;
+  String CONIPITEMNAME;
   String CONIPITEM;
   String CONIPITEMVAR;
 }

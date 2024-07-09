@@ -272,7 +272,7 @@ class _INPROCESSState extends State<INPROCESS> {
                             SRAWDATA: _Mdata.INPROCESS[i].SRAWDATA,
 
                             CONIP: _Mdata.INPROCESS[i].CONIP,
-                            CONIPITEM: _Mdata.INPROCESS[i].CONIPITEM,
+                            CONIPITEM: _Mdata.INPROCESS[i].CONIPITEMNAME,
                             CONIPITEMVAR: _Mdata.INPROCESS[i].CONIPITEMVAR,
 
                             ACTION: "ACTION",
@@ -280,6 +280,73 @@ class _INPROCESSState extends State<INPROCESS> {
                             EditFN: (v) {
                               //
                               // print(_Mdata.INPROCESS[i].ITEMsname);
+
+                              P6INSPECTION_FINAL_GET_STEP1(
+                                      P6INSPECTIONstdNvar_BASIC.CP)
+                                  .then((dynamic result) {
+                                // print(result);
+                                P6ClearFINAL();
+                                if (result['ITEMs'] != null) {
+                                  if (result['ITEMs'].length > 0) {
+                                    for (int i = 0;
+                                        i < result['ITEMs'].length;
+                                        i++) {
+                                      P6INSPECTIONstdNvar_FINAL.List_ITEMs.add(
+                                          MapEntry(
+                                              result['ITEMs'][i]['ITEMs']
+                                                  .toString(),
+                                              result['ITEMs'][i]['masterID']
+                                                  .toString()));
+
+                                      P6INSPECTIONstdNvar_FINAL.List_ITEMs_set
+                                          .add(
+                                        P6List_ITEMs_SET_Class(
+                                          ITEMs: result['ITEMs'][i]['ITEMs'] !=
+                                                  null
+                                              ? result['ITEMs'][i]['ITEMs']
+                                                  .toString()
+                                              : '',
+                                          RESULTFORMAT: result['ITEMs'][i]
+                                                      ['RESULTFORMAT'] !=
+                                                  null
+                                              ? result['ITEMs'][i]
+                                                      ['RESULTFORMAT']
+                                                  .toString()
+                                              : '',
+                                          TYPE:
+                                              result['ITEMs'][i]['TYPE'] != null
+                                                  ? result['ITEMs'][i]['TYPE']
+                                                      .toString()
+                                                  : '',
+                                          GRAPHTYPE: result['ITEMs'][i]
+                                                      ['GRAPHTYPE'] !=
+                                                  null
+                                              ? result['ITEMs'][i]['GRAPHTYPE']
+                                                  .toString()
+                                              : '',
+                                          INTERSECTION: result['ITEMs'][i]
+                                                      ['INTERSECTION'] !=
+                                                  null
+                                              ? result['ITEMs'][i]
+                                                      ['INTERSECTION']
+                                                  .toString()
+                                              : '',
+                                          masterID: result['ITEMs'][i]
+                                                      ['masterID'] !=
+                                                  null
+                                              ? result['ITEMs'][i]['masterID']
+                                                  .toString()
+                                              : '',
+                                        ),
+                                      );
+                                    }
+                                  }
+                                }
+
+                                setState(() {
+                                  P6NewdataFINAL();
+                                });
+                              });
 
                               P6ClearINPROCESS();
                               P6INSPECTIONstdNvar_INPROCESS.seq =
@@ -436,6 +503,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                                     .toString()));
                                       }
                                     }
+
                                     if (result['CALCULATE'] != null &&
                                         result['CALCULATE'].length > 0) {
                                       for (int i = 0;
@@ -554,6 +622,14 @@ class _INPROCESSState extends State<INPROCESS> {
                                   _Mdata.INPROCESS[i].AQL;
                               P6INSPECTIONstdNvar_INPROCESS.AQLV =
                                   _Mdata.INPROCESS[i].AQLV;
+
+                              P6INSPECTIONstdNvar_INPROCESS.CONIP =
+                                  _Mdata.INPROCESS[i].CONIP;
+                              P6INSPECTIONstdNvar_INPROCESS.CONIPITEM =
+                                  _Mdata.INPROCESS[i].CONIPITEM;
+
+                              P6INSPECTIONstdNvar_INPROCESS.CONIPITEMVAR =
+                                  _Mdata.INPROCESS[i].CONIPITEMVAR;
 
                               setState(() {
                                 P6INSPECTIONstdNvar_INPROCESS.POP = true;
