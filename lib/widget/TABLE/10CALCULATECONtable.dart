@@ -44,13 +44,13 @@ class CALCULATECONtableWidget extends StatelessWidget {
                   },
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: EACHCELL(
-                  data: FORMULAtext ?? "",
-                  tapCell: (v) {},
-                ),
-              ),
+              // Expanded(
+              //   flex: 1,
+              //   child: EACHCELL(
+              //     data: FORMULAtext ?? "",
+              //     tapCell: (v) {},
+              //   ),
+              // ),
               Expanded(
                 flex: 1,
                 child: isACTION ?? false

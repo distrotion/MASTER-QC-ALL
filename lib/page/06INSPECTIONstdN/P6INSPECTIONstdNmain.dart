@@ -43,6 +43,8 @@ class _P6P6InspectionSTDNmainState extends State<P6P6InspectionSTDNmain> {
     // TODO: implement initState
     super.initState();
     P6ClearFINAL();
+    //24000004
+    // P6INSPECTIONstdNvar_BASIC.CP = "24000004";
     context.read<P6FINSPECTIONget_Bloc>().add(P6FINSPECTIONget_MATCP());
   }
 

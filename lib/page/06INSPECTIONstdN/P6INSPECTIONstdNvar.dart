@@ -78,6 +78,13 @@ class P6INSPECTIONstdNvar_FINAL {
   static bool CAL_K2b = false;
   static bool CAL_K3b = false;
 
+  static String VARX = "-";
+  static String VARY = "-";
+  static String VARZ = "-";
+  static String VARI = "-";
+
+  static String shape = "-";
+
   static bool POP = false;
   //----------------------------
   static List<MapEntry<String, String>> List_ITEMs = [MapEntry("-", "-")];
@@ -406,6 +413,13 @@ P6ClearFINAL() {
   P6INSPECTIONstdNvar_FINAL.CALCULATEp = "-";
   // P6INSPECTIONstdNvar_FINAL.PICUPLOAD = "";
   P6INSPECTIONstdNvar_FINAL.TEXTTYPE = "-";
+
+  P6INSPECTIONstdNvar_FINAL.VARX = "-";
+  P6INSPECTIONstdNvar_FINAL.VARY = "-";
+  P6INSPECTIONstdNvar_FINAL.VARZ = "-";
+  P6INSPECTIONstdNvar_FINAL.VARI = "-";
+
+  P6INSPECTIONstdNvar_FINAL.shape = "-";
 }
 
 P6ClearINCOMMING() {

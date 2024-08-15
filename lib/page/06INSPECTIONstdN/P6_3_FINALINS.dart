@@ -148,6 +148,10 @@ class _INSFINALState extends State<INSFINAL> {
                           seq: "seq",
                           ITEMs: "ITEM",
                           K1CALDATA: "Constant",
+                          VARX: "VARX",
+                          VARY: "VARY",
+                          VARZ: "VARZ",
+                          VARI: "VARI",
                           CORStype: "CORStype",
                           FORMULA: "FORMULA",
                           SCMARK: "SC MARK",
@@ -190,8 +194,12 @@ class _INSFINALState extends State<INSFINAL> {
                             ITEMs: _Mdata.FINAL[i].ITEMsname,
 
                             K1CALDATA:
-                                _KSW(_Mdata.FINAL[i].K1b, _Mdata.FINAL[i].K1v),
+                                "${_KSW(_Mdata.FINAL[i].K1b, _Mdata.FINAL[i].K1v)}${_Mdata.FINAL[i].shape != "" ? "-" : ""}${_Mdata.FINAL[i].shape}",
                             // "${_Mdata.FINAL[i].K1b}(${_Mdata.FINAL[i].K1v})",
+                            VARX: _Mdata.FINAL[i].VARX,
+                            VARY: _Mdata.FINAL[i].VARY,
+                            VARZ: _Mdata.FINAL[i].VARZ,
+                            VARI: _Mdata.FINAL[i].VARI,
                             CORStype: "-",
                             FORMULA: "-",
                             SCMARK: _Mdata.FINAL[i].SCMARK,
@@ -492,6 +500,18 @@ class _INSFINALState extends State<INSFINAL> {
                               P6INSPECTIONstdNvar_FINAL.AQLV =
                                   _Mdata.FINAL[i].AQLV;
 
+                              P6INSPECTIONstdNvar_FINAL.VARX =
+                                  _Mdata.FINAL[i].VARX;
+
+                              P6INSPECTIONstdNvar_FINAL.VARY =
+                                  _Mdata.FINAL[i].VARY;
+
+                              P6INSPECTIONstdNvar_FINAL.VARZ =
+                                  _Mdata.FINAL[i].VARZ;
+
+                              P6INSPECTIONstdNvar_FINAL.VARI =
+                                  _Mdata.FINAL[i].VARI;
+
                               setState(() {
                                 P6INSPECTIONstdNvar_FINAL.POP = true;
                               });
@@ -560,6 +580,10 @@ class _INSFINALState extends State<INSFINAL> {
                                       seq: "seq",
                                       ITEMs: "ITEM",
                                       K1CALDATA: "Constant",
+                                      VARX: "VARX",
+                                      VARY: "VARY",
+                                      VARZ: "VARZ",
+                                      VARI: "VARI",
                                       CORStype: "CORStype",
                                       FORMULA: "FORMULA",
                                       SCMARK: "SC MARK",
@@ -858,8 +882,11 @@ class _INSFINALState extends State<INSFINAL> {
                                         children: [
                                           AdvanceDropDown(
                                             isEnable: P6INSPECTIONstdNvar_FINAL
-                                                    .RESULTFORMAT !=
-                                                'CAL1',
+                                                        .RESULTFORMAT !=
+                                                    'CAL1' &&
+                                                P6INSPECTIONstdNvar_FINAL
+                                                        .RESULTFORMAT !=
+                                                    'CAL2',
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
@@ -875,6 +902,32 @@ class _INSFINALState extends State<INSFINAL> {
                                             },
                                             value:
                                                 P6INSPECTIONstdNvar_FINAL.K1b,
+                                            height: 40,
+                                            width: 80,
+                                          ),
+                                          AdvanceDropDown(
+                                            isEnable: P6INSPECTIONstdNvar_FINAL
+                                                        .RESULTFORMAT !=
+                                                    'CAL1' &&
+                                                P6INSPECTIONstdNvar_FINAL
+                                                        .RESULTFORMAT !=
+                                                    'CAL2',
+                                            imgpath:
+                                                'assets/icons/icon-down_4@3x.png',
+                                            listdropdown: [
+                                              MapEntry("-", "-"),
+                                              MapEntry("sheet", "sheet"),
+                                              MapEntry("cylinder", "cylinder"),
+                                              MapEntry("tube", "tube")
+                                            ],
+                                            onChangeinside: (d, k) {
+                                              setState(() {
+                                                P6INSPECTIONstdNvar_FINAL
+                                                    .shape = d;
+                                              });
+                                            },
+                                            value:
+                                                P6INSPECTIONstdNvar_FINAL.shape,
                                             height: 40,
                                             width: 80,
                                           ),
@@ -903,6 +956,90 @@ class _INSFINALState extends State<INSFINAL> {
                                             ),
                                           ]
                                         ],
+                                      ),
+                                      VARX: "VARX",
+                                      WIDGETVARX: AdvanceDropDown(
+                                        isEnable: P6INSPECTIONstdNvar_FINAL
+                                                .RESULTFORMAT !=
+                                            'CAL2',
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("-", "-"),
+                                          MapEntry("YES", "YES"),
+                                          MapEntry("NO", "NO")
+                                        ],
+                                        onChangeinside: (d, k) {
+                                          setState(() {
+                                            P6INSPECTIONstdNvar_FINAL.VARX = d;
+                                          });
+                                        },
+                                        value: P6INSPECTIONstdNvar_FINAL.VARX,
+                                        height: 40,
+                                        width: 80,
+                                      ),
+                                      VARY: "VARY",
+                                      WIDGETVARY: AdvanceDropDown(
+                                        isEnable: P6INSPECTIONstdNvar_FINAL
+                                                .RESULTFORMAT !=
+                                            'CAL2',
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("-", "-"),
+                                          MapEntry("YES", "YES"),
+                                          MapEntry("NO", "NO")
+                                        ],
+                                        onChangeinside: (d, k) {
+                                          setState(() {
+                                            P6INSPECTIONstdNvar_FINAL.VARY = d;
+                                          });
+                                        },
+                                        value: P6INSPECTIONstdNvar_FINAL.VARY,
+                                        height: 40,
+                                        width: 80,
+                                      ),
+                                      VARZ: "VARZ",
+                                      WIDGETVARZ: AdvanceDropDown(
+                                        isEnable: P6INSPECTIONstdNvar_FINAL
+                                                .RESULTFORMAT !=
+                                            'CAL2',
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("-", "-"),
+                                          MapEntry("YES", "YES"),
+                                          MapEntry("NO", "NO")
+                                        ],
+                                        onChangeinside: (d, k) {
+                                          setState(() {
+                                            P6INSPECTIONstdNvar_FINAL.VARZ = d;
+                                          });
+                                        },
+                                        value: P6INSPECTIONstdNvar_FINAL.VARZ,
+                                        height: 40,
+                                        width: 80,
+                                      ),
+                                      VARI: "VARI",
+                                      WIDGETVARI: AdvanceDropDown(
+                                        isEnable: P6INSPECTIONstdNvar_FINAL
+                                                .RESULTFORMAT !=
+                                            'CAL2',
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("-", "-"),
+                                          MapEntry("YES", "YES"),
+                                          MapEntry("NO", "NO")
+                                        ],
+                                        onChangeinside: (d, k) {
+                                          setState(() {
+                                            P6INSPECTIONstdNvar_FINAL.VARI = d;
+                                          });
+                                        },
+                                        value: P6INSPECTIONstdNvar_FINAL.VARI,
+                                        height: 40,
+                                        width: 80,
                                       ),
                                       SCMARK: "SC MARK",
                                       WIDGETSCMARK: Column(
@@ -1580,9 +1717,7 @@ class _INSFINALState extends State<INSFINAL> {
                                       SAVEFN: (v) {
                                         print(P6INSPECTIONstdNvar_FINAL
                                             .RESULTFORMAT);
-                                        if (P6INSPECTIONstdNvar_FINAL
-                                                    .RESULTFORMAT ==
-                                                'Text' ||
+                                        if (P6INSPECTIONstdNvar_FINAL.RESULTFORMAT == 'Text' ||
                                             P6INSPECTIONstdNvar_FINAL
                                                     .RESULTFORMAT ==
                                                 'Picture') {
@@ -1599,7 +1734,10 @@ class _INSFINALState extends State<INSFINAL> {
                                                 'Graph' ||
                                             P6INSPECTIONstdNvar_FINAL
                                                     .RESULTFORMAT ==
-                                                'CAL1') {
+                                                'CAL1' ||
+                                            P6INSPECTIONstdNvar_FINAL
+                                                    .RESULTFORMAT ==
+                                                'CAL2') {
                                           context
                                               .read<P6UPLOADSPEC_Bloc>()
                                               .add(P6UPLOADSPEC_FINAL_NUM());

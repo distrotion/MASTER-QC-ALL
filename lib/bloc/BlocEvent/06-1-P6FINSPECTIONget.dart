@@ -609,6 +609,7 @@ class P6FINSPECTIONget_Bloc
                 ? databuff['COMMENT'].toString()
                 : "";
           }
+          print(databuff[0]['FINAL'][i]['VARI']);
           output.FINAL.add(
             speckSTD(
               seq: databuff[0]['FINAL'][i]['SEQ'] != null
@@ -826,6 +827,25 @@ class P6FINSPECTIONget_Bloc
                   : '',
               AQLV: databuff[0]['FINAL'][i]['AQLV'] != null
                   ? databuff[0]['FINAL'][i]['AQLV'].toString()
+                  : '',
+
+              VARX: databuff[0]['FINAL'][i]['VARX'] != null
+                  ? databuff[0]['FINAL'][i]['VARX'].toString()
+                  : '',
+
+              VARY: databuff[0]['FINAL'][i]['VARY'] != null
+                  ? databuff[0]['FINAL'][i]['VARY'].toString()
+                  : '',
+
+              VARZ: databuff[0]['FINAL'][i]['VARZ'] != null
+                  ? databuff[0]['FINAL'][i]['VARZ'].toString()
+                  : '',
+
+              VARI: databuff[0]['FINAL'][i]['VARI'] != null
+                  ? databuff[0]['FINAL'][i]['VARI'].toString()
+                  : '',
+              shape: databuff[0]['FINAL'][i]['shape'] != null
+                  ? databuff[0]['FINAL'][i]['shape'].toString()
                   : '',
             ),
           );
@@ -1552,6 +1572,11 @@ class speckSTD {
     this.CONIPITEMNAME = '',
     this.CONIPITEM = '',
     this.CONIPITEMVAR = '',
+    this.VARX = '',
+    this.VARY = '',
+    this.VARZ = '',
+    this.VARI = '',
+    this.shape = '',
   });
 
   String seq;
@@ -1609,6 +1634,12 @@ class speckSTD {
   String CONIPITEMNAME;
   String CONIPITEM;
   String CONIPITEMVAR;
+
+  String VARX;
+  String VARY;
+  String VARZ;
+  String VARI;
+  String shape;
 }
 
 class BasicBodyData {

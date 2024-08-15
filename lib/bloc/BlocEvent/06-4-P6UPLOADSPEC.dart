@@ -245,6 +245,12 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
         "SRAWDATA": P6INSPECTIONstdNvar_FINAL.SRAWDATA,
         "SCMARKTYPE": P6INSPECTIONstdNvar_FINAL.SCMARKTYPE,
         "SUMDATATEXT": P6INSPECTIONstdNvar_FINAL.SUMDATATEXT,
+
+        "VARX": P6INSPECTIONstdNvar_FINAL.VARX,
+        "VARY": P6INSPECTIONstdNvar_FINAL.VARY,
+        "VARZ": P6INSPECTIONstdNvar_FINAL.VARZ,
+        "VARI": P6INSPECTIONstdNvar_FINAL.VARI,
+        "shape": P6INSPECTIONstdNvar_FINAL.shape,
       }
     };
 
@@ -341,6 +347,7 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
         "SRAWDATA": P6INSPECTIONstdNvar_FINAL.SRAWDATA,
         "SCMARKTYPE": P6INSPECTIONstdNvar_FINAL.SCMARKTYPE,
         "SUMDATATEXT": P6INSPECTIONstdNvar_FINAL.SUMDATATEXT,
+        "shape": P6INSPECTIONstdNvar_FINAL.shape,
       }
     };
 

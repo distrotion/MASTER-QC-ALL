@@ -27,6 +27,10 @@ class PATTERNtable extends StatelessWidget {
     this.REMARK,
     this.SWreport,
     this.K1CALDATA,
+    this.VARX,
+    this.VARY,
+    this.VARZ,
+    this.VARI,
     this.CONVERSEDATA,
     this.SUMdata,
     this.SRAWDATA,
@@ -53,6 +57,10 @@ class PATTERNtable extends StatelessWidget {
     this.ShowREMARK,
     this.ShowSWreport,
     this.ShowK1CALDATA,
+    this.ShowVARX,
+    this.ShowVARY,
+    this.ShowVARZ,
+    this.ShowVARI,
     this.ShowCONVERSEDATA,
     this.ShowSUMdata,
     this.ShowSRAWDATA,
@@ -80,6 +88,10 @@ class PATTERNtable extends StatelessWidget {
     this.WIDGETREMARK,
     this.WIDGETSWreport,
     this.WIDGETK1CALDATA,
+    this.WIDGETVARX,
+    this.WIDGETVARY,
+    this.WIDGETVARZ,
+    this.WIDGETVARI,
     this.WIDGETCONVERSEDATA,
     this.WIDGETSUMdata,
     this.WIDGETSRAWDATA,
@@ -116,6 +128,11 @@ class PATTERNtable extends StatelessWidget {
   String? SWreport;
   String? K1CALDATA;
 
+  String? VARX;
+  String? VARY;
+  String? VARZ;
+  String? VARI;
+
   String? CONVERSEDATA;
   String? SUMdata;
   String? SRAWDATA;
@@ -143,6 +160,11 @@ class PATTERNtable extends StatelessWidget {
   bool? ShowREMARK;
   bool? ShowSWreport;
   bool? ShowK1CALDATA;
+
+  bool? ShowVARX;
+  bool? ShowVARY;
+  bool? ShowVARZ;
+  bool? ShowVARI;
 
   bool? ShowCONVERSEDATA;
   bool? ShowSUMdata;
@@ -172,6 +194,11 @@ class PATTERNtable extends StatelessWidget {
   Widget? WIDGETSWreport;
 
   Widget? WIDGETK1CALDATA;
+
+  Widget? WIDGETVARX;
+  Widget? WIDGETVARY;
+  Widget? WIDGETVARZ;
+  Widget? WIDGETVARI;
 
   Widget? WIDGETCONVERSEDATA;
   Widget? WIDGETSUMdata;
@@ -227,6 +254,50 @@ class PATTERNtable extends StatelessWidget {
                           tapCell: (v) {},
                         )
                       : WIDGETK1CALDATA ?? SizedBox(),
+                ),
+              ],
+              if (ShowVARX ?? true) ...[
+                Expanded(
+                  flex: 5,
+                  child: WIDGETVARX == null
+                      ? EACHCELL(
+                          data: VARX ?? "",
+                          tapCell: (v) {},
+                        )
+                      : WIDGETVARX ?? SizedBox(),
+                ),
+              ],
+              if (ShowVARY ?? true) ...[
+                Expanded(
+                  flex: 5,
+                  child: WIDGETVARY == null
+                      ? EACHCELL(
+                          data: VARY ?? "",
+                          tapCell: (v) {},
+                        )
+                      : WIDGETVARY ?? SizedBox(),
+                ),
+              ],
+              if (ShowVARZ ?? true) ...[
+                Expanded(
+                  flex: 5,
+                  child: WIDGETVARZ == null
+                      ? EACHCELL(
+                          data: VARZ ?? "",
+                          tapCell: (v) {},
+                        )
+                      : WIDGETVARZ ?? SizedBox(),
+                ),
+              ],
+              if (ShowVARI ?? true) ...[
+                Expanded(
+                  flex: 5,
+                  child: WIDGETVARI == null
+                      ? EACHCELL(
+                          data: VARI ?? "",
+                          tapCell: (v) {},
+                        )
+                      : WIDGETVARI ?? SizedBox(),
                 ),
               ],
               if (ShowFORMULA ?? true) ...[
