@@ -119,6 +119,7 @@ class CALCULATEtable extends StatelessWidget {
                 }, "DELETE DATA", 120, 90);
               },
               EditFN: (v) {
+                print("------------");
                 FINALMASTERvar.CALCULATE_CALCULATE_ACTION = _data[i].f01;
                 FINALMASTERvar.FORMULA_CALCULATE_ACTION = _data[i].f02;
                 FINALMASTERvar.X_CALCULATE_ACTION = _data[i].f41;
@@ -503,13 +504,13 @@ class _CALCULATEACTIONState extends State<CALCULATEACTION> {
                 height: 40,
                 width: 400,
                 isContr: FINALMASTERvar.iscontrol,
-                isEnabled: FINALMASTERvar.masterID_ACTION_isEnabled,
+                // isEnabled: FINALMASTERvar.masterID_ACTION_isEnabled,
                 fnContr: (input) {
                   setState(() {
                     FINALMASTERvar.iscontrol = input;
                   });
                 },
-                // sValue: FINALMASTERvar.masterID_CALCULATE_ACTION,
+                sValue: FINALMASTERvar.masterID_CALCULATE_ACTION,
                 returnfunc: (String s) {
                   FINALMASTERvar.masterID_CALCULATE_ACTION = s;
                 },

@@ -138,7 +138,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                     children: [
                       SizedBox(
                         height: 40,
-                        child: PATTERNtable(
+                        child: PATTERNIPtable(
                           ShowCORStype: false,
                           ShowLOAD: false,
                           ShowGT: false,

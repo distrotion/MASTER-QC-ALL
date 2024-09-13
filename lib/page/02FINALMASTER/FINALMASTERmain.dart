@@ -203,18 +203,20 @@ class _FINALMASTERmainState extends State<FINALMASTERmain> {
                     ? StepState.indexed
                     : StepState.indexed,
               ),
-              Step(
-                title: const Text(
-                  'CAL2',
-                ),
-                content: CALCULATECONtable(
-                  data: FINALMASTERvar.CALCULATECONget,
-                ),
-                isActive: FINALMASTERvar.currentStep == 9,
-                state: FINALMASTERvar.currentStep == 9
-                    ? StepState.indexed
-                    : StepState.indexed,
-              ),
+
+              //
+              // Step(
+              //   title: const Text(
+              //     'CAL2',
+              //   ),
+              //   content: CALCULATECONtable(
+              //     data: FINALMASTERvar.CALCULATECONget,
+              //   ),
+              //   isActive: FINALMASTERvar.currentStep == 9,
+              //   state: FINALMASTERvar.currentStep == 9
+              //       ? StepState.indexed
+              //       : StepState.indexed,
+              // ),
             ],
           ),
         ),
