@@ -26,6 +26,13 @@ class MATCPlistGET_Bloc extends Bloc<MATCPlistGET_Event, List<MATCPlistClass>> {
       List<MATCPlistClass> toAdd, Emitter<List<MATCPlistClass>> emit) async {
     List<MATCPlistClass> output = [];
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_MATCPLIST",
       data: {},
     );

@@ -65,6 +65,13 @@ class P6FINSPECTIONget_Bloc
     // P6INSPECTIONstdNvar_BASIC.CP = "24010177";
     // P6INSPECTIONstdNvar_BASIC.CP = "24000002";
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_MATCP_DATA",
       data: {
         "MATCP": P6INSPECTIONstdNvar_BASIC.CP,
@@ -73,7 +80,7 @@ class P6FINSPECTIONget_Bloc
     );
     if (response.statusCode == 200) {
       var databuff = response.data;
-      // print(databuff[0]['INPROCESS']);
+      // print(databuff);
 
       output.status = 'GET_ALL';
 
@@ -572,6 +579,13 @@ class P6FINSPECTIONget_Bloc
         for (var i = 0; i < databuff[0]['FINAL'].length; i++) {
           //
           final rest = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_FINAL_DOCUMENT",
             data: {
               "METHODid": databuff[0]['FINAL'][i]['METHOD'] != null
@@ -593,6 +607,13 @@ class P6FINSPECTIONget_Bloc
           }
 
           final rest2 = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_FINAL_COMMENT",
             data: {
               "masterID": databuff[0]['FINAL'][i]['REMARK'] != null
@@ -856,6 +877,13 @@ class P6FINSPECTIONget_Bloc
         // print(databuff[0]['INCOMMING']);
         for (var i = 0; i < databuff[0]['INCOMMING'].length; i++) {
           final rest3 = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_INCOMMING_DOCUMENT",
             data: {
               "METHODid": databuff[0]['INCOMMING'][i]['METHOD'] != null
@@ -877,6 +905,13 @@ class P6FINSPECTIONget_Bloc
           }
 
           final rest4 = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_INCOMMING_COMMENT",
             data: {
               "masterID": databuff[0]['INCOMMING'][i]['REMARK'] != null
@@ -1152,6 +1187,13 @@ class P6FINSPECTIONget_Bloc
         // print(databuff[0]['INPROCESS']);
         for (var i = 0; i < databuff[0]['INPROCESS'].length; i++) {
           final rest3 = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_INCOMMING_DOCUMENT",
             data: {
               "METHODid": databuff[0]['INPROCESS'][i]['METHOD'] != null
@@ -1173,6 +1215,13 @@ class P6FINSPECTIONget_Bloc
           }
 
           final rest4 = await Dio().post(
+            options: Options(
+              // contentType: "application/json",
+
+              headers: {
+                "server": USERDATA.MASTER,
+              },
+            ),
             serverGB + "GET_INCOMMING_COMMENT",
             data: {
               "masterID": databuff[0]['INPROCESS'][i]['REMARK'] != null
@@ -1469,6 +1518,12 @@ class P6FINSPECTIONget_Bloc
       if (picHoldList.length > 1) {
         output.Pimg = picHoldList[1];
       }
+      print("-------------------------");
+      print(databuff[0]['reportset']);
+      print("------------------------->");
+      if (databuff[0]['reportset'] != null) {
+        output.reportset = databuff[0]['reportset'].toString();
+      }
     }
 
     Navigator.pop(P6P6InspectionSTDNmaincontext);
@@ -1502,6 +1557,7 @@ class P6InspectionSTD {
     //-------------------------------
     this.Pimg = '',
     this.CUST_FULLNM = '',
+    this.reportset = '',
   });
   String status;
   String MATCP;
@@ -1517,6 +1573,8 @@ class P6InspectionSTD {
   //-------------------------------
   String Pimg;
   String CUST_FULLNM;
+
+  String reportset;
 }
 
 class speckSTD {

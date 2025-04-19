@@ -12,8 +12,6 @@ class P10SELECTPLANTmain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    serverGB = '';
-
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -23,9 +21,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
+                  USERDATA.MASTER = "HES-PH";
 
-                  serverGB = serverPHHES;
                   CuPage = Page4();
 
                   MainBodyContext.read<ChangePage_Bloc>()
@@ -50,9 +47,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
+                  USERDATA.MASTER = "HES-PAL";
 
-                  serverGB = serverPALHES;
                   CuPage = Page4();
 
                   MainBodyContext.read<ChangePage_Bloc>()
@@ -71,15 +67,14 @@ class P10SELECTPLANTmain extends StatelessWidget {
               ),
             ),
           ],
-          if (USERDATA.LOCATIONList.contains("BP12-PAL12") &&
+          if (USERDATA.LOCATIONList.contains("BP12-PAL") &&
               USERDATA.UserLV >= 5) ...[
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
+                  USERDATA.MASTER = "BP12-PAL";
 
-                  serverGB = serverPALBP12;
                   CuPage = Page4();
 
                   MainBodyContext.read<ChangePage_Bloc>()
@@ -104,9 +99,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
+                  USERDATA.MASTER = "BP12-PVD";
 
-                  serverGB = serverPVDBP12;
                   CuPage = Page4();
 
                   MainBodyContext.read<ChangePage_Bloc>()
@@ -131,9 +125,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
+                  USERDATA.MASTER = "BP12-KNG";
 
-                  serverGB = serverKNGBP12;
                   CuPage = Page4();
 
                   MainBodyContext.read<ChangePage_Bloc>()
@@ -158,8 +151,7 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
-                  serverGB = '';
-                  serverGB = serverPHBP12;
+                  USERDATA.MASTER = "BP12-PH";
 
                   CuPage = Page4();
 
@@ -173,6 +165,110 @@ class P10SELECTPLANTmain extends StatelessWidget {
                   child: Center(
                     child: Center(
                       child: Text("PH BP12"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+          if (USERDATA.LOCATIONList.contains("HES-GAS") &&
+              USERDATA.UserLV >= 5) ...[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: InkWell(
+                onTap: () {
+                  USERDATA.MASTER = "HES-GAS";
+
+                  CuPage = Page4();
+
+                  MainBodyContext.read<ChangePage_Bloc>()
+                      .add(ChangePage_nodrower());
+                },
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Center(
+                      child: Text("HES GAS"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+          if (USERDATA.LOCATIONList.contains("GW-GAS") &&
+              USERDATA.UserLV >= 5) ...[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: InkWell(
+                onTap: () {
+                  USERDATA.MASTER = "GW-GAS";
+
+                  CuPage = Page4();
+
+                  MainBodyContext.read<ChangePage_Bloc>()
+                      .add(ChangePage_nodrower());
+                },
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Center(
+                      child: Text("GW GAS"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+          if (USERDATA.LOCATIONList.contains("BP12-GAS") &&
+              USERDATA.UserLV >= 5) ...[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: InkWell(
+                onTap: () {
+                  USERDATA.MASTER = "BP12-GAS";
+
+                  CuPage = Page4();
+
+                  MainBodyContext.read<ChangePage_Bloc>()
+                      .add(ChangePage_nodrower());
+                },
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Center(
+                      child: Text("BP12 GAS"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+          if (USERDATA.LOCATIONList.contains("HES-ISN") &&
+              USERDATA.UserLV >= 5) ...[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: InkWell(
+                onTap: () {
+                  USERDATA.MASTER = "HES-ISN";
+
+                  CuPage = Page4();
+
+                  MainBodyContext.read<ChangePage_Bloc>()
+                      .add(ChangePage_nodrower());
+                },
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Center(
+                      child: Text("HES ISN"),
                     ),
                   ),
                 ),

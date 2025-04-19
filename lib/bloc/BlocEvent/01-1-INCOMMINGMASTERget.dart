@@ -73,6 +73,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_TYPE_INCOMMING",
       data: {},
     );
@@ -115,6 +122,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_UNIT_INCOMMING",
       data: {},
     );
@@ -166,6 +180,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_ITEMSget_INCOMMING",
       data: {},
     );
@@ -233,6 +254,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_MACHINENAMEget_INCOMMING",
       data: {},
     );
@@ -293,6 +321,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_METHODEget_INCOMMING",
       data: {},
     );
@@ -348,6 +383,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_SPECIALSPECget_INCOMMING",
       data: {},
     );
@@ -397,6 +439,13 @@ class INCOMMINGMASTER_Bloc
     );
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_CALCULATEget_INCOMMING",
       data: {},
     );
@@ -466,6 +515,13 @@ class INCOMMINGMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_COMMENT_INCOMMING",
       data: {},
     );

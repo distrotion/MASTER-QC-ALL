@@ -1009,6 +1009,13 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                                   .METHOD = d;
                                               print(d);
                                               final response = await Dio().post(
+                                                options: Options(
+                                                  // contentType: "application/json",
+
+                                                  headers: {
+                                                    "server": USERDATA.MASTER,
+                                                  },
+                                                ),
                                                 serverGB +
                                                     "GET_INCOMMING_DOCUMENT",
                                                 data: {

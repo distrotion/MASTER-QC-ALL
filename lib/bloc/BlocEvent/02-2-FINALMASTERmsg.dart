@@ -148,6 +148,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_TYPE_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_TYPE,
@@ -167,6 +174,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_UNIT_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_UNIT,
@@ -180,6 +194,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_ITEMS_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_ITEMS,
@@ -193,6 +214,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_MACHINENAME_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_MACHINENAME,
@@ -207,6 +235,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_METHODE_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_METHODE,
@@ -221,6 +256,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_SPECIFICATION_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_SPECIALSPEC,
@@ -236,6 +278,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_CALCULATE_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_CALCULATE,
@@ -251,6 +300,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_COMMENT_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_COMMENT,
@@ -271,6 +327,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_CALCULATECON_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_CALCULATE,
@@ -287,6 +350,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_TYPE_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_TYPE_ACTION,
@@ -302,6 +372,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_UNIT_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_UNIT_ACTION,
@@ -319,6 +396,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_ITEMS_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_ITEMS_ACTION,
@@ -340,6 +424,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_MACHINENAME_FINAL",
       data: {
         "METHOD": FINALMASTERvar.METHOD_MACHINENAME_ACTION,
@@ -358,6 +449,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_METHODE_FINAL",
       data: {
         "ITEMs": FINALMASTERvar.ITEM_METHOD_ACTION,
@@ -376,6 +474,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_SPECIFICATION_FINAL",
       data: {
         "ITEMs": FINALMASTERvar.ITEM_SPECIALSPEC_ACTION,
@@ -393,6 +498,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_CALCULATE_FINAL",
       data: {
         "CALCULATE": FINALMASTERvar.CALCULATE_CALCULATE_ACTION,
@@ -424,6 +536,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_COMMENT_FINAL",
       data: {
         "masterID": FINALMASTERvar.masterID_COMMENT_ACTION,
@@ -440,6 +559,13 @@ class FINALMASTERmsg_Bloc extends Bloc<FINALMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_CALCULATECON_FINAL",
       data: {
         "CALCULATE": FINALMASTERvar.CALCULATECON_CALCULATECON_ACTION,

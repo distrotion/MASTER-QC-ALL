@@ -49,6 +49,13 @@ class INCOMMINGMASTERdropdown_Bloc
     );
     //------------------------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROPDOWN_MASTER_INCOMMING",
       data: {},
     );

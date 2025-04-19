@@ -80,6 +80,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_TYPE_INPROCESS",
       data: {},
     );
@@ -122,6 +129,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_UNIT_INPROCESS",
       data: {},
     );
@@ -173,6 +187,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_ITEMSget_INPROCESS",
       data: {},
     );
@@ -240,6 +261,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_MACHINENAMEget_INPROCESS",
       data: {},
     );
@@ -300,6 +328,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_METHODEget_INPROCESS",
       data: {},
     );
@@ -355,6 +390,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_SPECIALSPECget_INPROCESS",
       data: {},
     );
@@ -404,6 +446,13 @@ class INPROCESSMASTER_Bloc
     );
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_CALCULATEget_INPROCESS",
       data: {},
     );
@@ -473,6 +522,13 @@ class INPROCESSMASTER_Bloc
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_COMMENT_INPROCESS",
       data: {},
     );
@@ -515,6 +571,13 @@ class INPROCESSMASTER_Bloc
     );
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_CALCULATECONget_INPROCESS",
       data: {},
     );

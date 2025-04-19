@@ -139,6 +139,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_TYPE_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_TYPE,
@@ -159,6 +166,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_UNIT_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_UNIT,
@@ -173,6 +187,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_ITEMS_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_ITEMS,
@@ -187,6 +208,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_MACHINENAME_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_MACHINENAME,
@@ -201,6 +229,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_METHODE_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_METHODE,
@@ -215,6 +250,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_SPECIFICATION_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_SPECIALSPEC,
@@ -230,6 +272,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_CALCULATE_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_CALCULATE,
@@ -245,6 +294,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_COMMENT_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_COMMENT,
@@ -267,6 +323,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_TYPE_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_TYPE_ACTION,
@@ -283,6 +346,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_UNIT_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_UNIT_ACTION,
@@ -301,6 +371,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_ITEMS_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_ITEMS_ACTION,
@@ -323,6 +400,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_MACHINENAME_INCOMMING",
       data: {
         "METHOD": INCOMMINGMASTERvar.METHOD_MACHINENAME_ACTION,
@@ -341,6 +425,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_METHODE_INCOMMING",
       data: {
         "ITEMs": INCOMMINGMASTERvar.ITEM_METHOD_ACTION,
@@ -359,6 +450,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_SPECIFICATION_INCOMMING",
       data: {
         "ITEMs": INCOMMINGMASTERvar.ITEM_SPECIALSPEC_ACTION,
@@ -376,6 +474,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_CALCULATE_INCOMMING",
       data: {
         "CALCULATE": INCOMMINGMASTERvar.CALCULATE_CALCULATE_ACTION,
@@ -407,6 +512,13 @@ class INCOMMINGMASTERmsg_Bloc extends Bloc<INCOMMINGMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_COMMENT_INCOMMING",
       data: {
         "masterID": INCOMMINGMASTERvar.masterID_COMMENT_ACTION,

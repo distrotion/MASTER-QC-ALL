@@ -150,6 +150,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_TYPE_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_TYPE,
@@ -170,6 +177,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_UNIT_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_UNIT,
@@ -184,6 +198,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_ITEMS_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_ITEMS,
@@ -198,6 +219,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_MACHINENAME_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_MACHINENAME,
@@ -212,6 +240,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_METHODE_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_METHODE,
@@ -226,6 +261,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_SPECIFICATION_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_SPECIALSPEC,
@@ -241,6 +283,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_CALCULATE_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_CALCULATE,
@@ -256,6 +305,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
     String output = '';
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_COMMENT_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_COMMENT,
@@ -276,6 +332,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "DROP_CALCULATECON_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_CALCULATE,
@@ -292,6 +355,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_TYPE_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_TYPE_ACTION,
@@ -308,6 +378,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_UNIT_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_UNIT_ACTION,
@@ -326,6 +403,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_ITEMS_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_ITEMS_ACTION,
@@ -348,6 +432,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_MACHINENAME_INPROCESS",
       data: {
         "METHOD": INPROCESSMASTERvar.METHOD_MACHINENAME_ACTION,
@@ -366,6 +457,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_METHODE_INPROCESS",
       data: {
         "ITEMs": INPROCESSMASTERvar.ITEM_METHOD_ACTION,
@@ -384,6 +482,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_SPECIFICATION_INPROCESS",
       data: {
         "ITEMs": INPROCESSMASTERvar.ITEM_SPECIALSPEC_ACTION,
@@ -401,6 +506,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_CALCULATE_INPROCESS",
       data: {
         "CALCULATE": INPROCESSMASTERvar.CALCULATE_CALCULATE_ACTION,
@@ -432,6 +544,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_COMMENT_INPROCESS",
       data: {
         "masterID": INPROCESSMASTERvar.masterID_COMMENT_ACTION,
@@ -448,6 +567,13 @@ class INPROCESSMASTERmsg_Bloc extends Bloc<INPROCESSMASTERmsg_Event, String> {
       String toAdd, Emitter<String> emit) async {
     String output = '';
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "EDIT_CALCULATECON_INPROCESS",
       data: {
         "CALCULATE": INPROCESSMASTERvar.CALCULATECON_CALCULATECON_ACTION,

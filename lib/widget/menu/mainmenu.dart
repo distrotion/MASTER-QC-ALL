@@ -6,6 +6,7 @@ import '../../data/global.dart';
 import '../../mainBody.dart';
 import '../../page/page1.dart';
 import '../../page/page10.dart';
+import '../../page/page11.dart';
 import '../../page/page2.dart';
 import '../../page/page3.dart';
 import '../../page/page4.dart';
@@ -158,11 +159,7 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
               ),
             ],
           ],
-          // menu_normal(
-          //   name: "MASTER FINAL",
-          //   page: Page2(),
-          //   Lv: 1,
-          // ),
+
           // menu_normal(
           //   name: "Page3",
           //   page: Page3(),
@@ -181,6 +178,11 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
           menu_normal(
             name: "INSPECTION STD",
             page: Page6(),
+            Lv: 1,
+          ),
+          menu_normal(
+            name: "Signature",
+            page: Page11(),
             Lv: 1,
           ),
           // menu_normal(

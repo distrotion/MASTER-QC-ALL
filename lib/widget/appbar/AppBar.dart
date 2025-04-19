@@ -96,7 +96,7 @@ class Logo1 extends StatelessWidget {
       child: Container(
         color: Color(0xff0b1327),
         child: Text(
-          "Thaiparker ${PLANTname()}",
+          "Thaiparker ${USERDATA.MASTER}",
           style: TextStyle(
             fontFamily: 'Mitr',
             color: Colors.white,
@@ -117,11 +117,12 @@ class Pack_topright_bar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 20),
       child: Container(
-          width: 150,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Time_(), Icon_bell(), Icon_profile()],
-          )),
+        width: 150,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Time_(), Icon_bell(), Icon_profile()],
+        ),
+      ),
     );
   }
 }
@@ -192,21 +193,21 @@ class _Time_State extends State<Time_> {
   }
 }
 
-String PLANTname() {
-  String output = '';
+// String PLANTname() {
+//   String output = '';
 
-  if (serverGB == serverPHHES) {
-    output = 'PH HES';
-  } else if (serverGB == serverPALHES) {
-    output = 'PAL HES';
-  } else if (serverGB == serverPALBP12) {
-    output = 'PAL BP12';
-  } else if (serverGB == serverPVDBP12) {
-    output = 'PVD BP12';
-  } else if (serverGB == serverKNGBP12) {
-    output = 'KNG BP12';
-  } else if (serverGB == serverPHBP12) {
-    output = 'PH BP12';
-  }
-  return output;
-}
+//   if (serverGB == serverPHHES) {
+//     output = 'PH HES';
+//   } else if (serverGB == serverPALHES) {
+//     output = 'PAL HES';
+//   } else if (serverGB == serverPALBP12) {
+//     output = 'PAL BP12';
+//   } else if (serverGB == serverPVDBP12) {
+//     output = 'PVD BP12';
+//   } else if (serverGB == serverKNGBP12) {
+//     output = 'KNG BP12';
+//   } else if (serverGB == serverPHBP12) {
+//     output = 'PH BP12';
+//   }
+//   return output;
+// }

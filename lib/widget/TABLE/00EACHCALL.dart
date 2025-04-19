@@ -28,14 +28,14 @@ class EACHCELL extends StatelessWidget {
         color: BGcolor ?? Colors.transparent,
         child: Align(
           alignment: Alingn ?? Alignment.center,
-          child: Text(
+          child: SelectableText(
             data ?? "",
             style: textSty ??
                 const TextStyle(
                   fontSize: 14,
                   color: Colors.black,
                 ),
-            overflow: Txtover ?? TextOverflow.clip,
+            // overflow: Txtover ?? TextOverflow.clip,
           ),
         ),
       ),

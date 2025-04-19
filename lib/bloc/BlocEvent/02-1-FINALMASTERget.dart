@@ -76,6 +76,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_TYPE_FINAL",
       data: {},
     );
@@ -118,6 +125,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_UNIT_FINAL",
       data: {},
     );
@@ -169,6 +183,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_ITEMSget_FINAL",
       data: {},
     );
@@ -236,6 +257,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_MACHINENAMEget_FINAL",
       data: {},
     );
@@ -296,6 +324,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_METHODEget_FINAL",
       data: {},
     );
@@ -351,6 +386,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_SPECIALSPECget_FINAL",
       data: {},
     );
@@ -400,6 +442,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_CALCULATEget_FINAL",
       data: {},
     );
@@ -469,6 +518,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
     //--------------------------------------------------------
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_COMMENT_FINAL",
       data: {},
     );
@@ -511,6 +567,13 @@ class FINALMASTER_Bloc extends Bloc<FINALMASTER_Event, DatasetWithSatatus> {
     );
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "GET_CALCULATECONget_FINAL",
       data: {},
     );

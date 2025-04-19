@@ -5,6 +5,7 @@ import '../../bloc/BlocEvent/04-1-MATCPlistGET.dart';
 import '../../bloc/BlocEvent/ChangePageEvent.dart';
 import '../../data/global.dart';
 import '../../mainBody.dart';
+import '../../model/model.dart';
 import '../../widget/TABLE/12-SEARCHMATCP.dart';
 import '../../widget/common/ComInputText.dart';
 import '../05INSPECTIONstd/INSPECTIONstdVAR.dart';
@@ -12,6 +13,10 @@ import '../06INSPECTIONstdN/P6INSPECTIONstdNvar.dart';
 import '../page5.dart';
 import '../page6.dart';
 import '04MATCPlistMAINvar.dart';
+import 'dart:html';
+import 'package:csv/csv.dart';
+
+DateTime selectedDate = DateTime.now();
 
 class MATCPlistMAIN extends StatefulWidget {
   MATCPlistMAIN({
@@ -152,7 +157,34 @@ class _MATCPlistMAINState extends State<MATCPlistMAIN> {
                         child: Center(child: Text("CLEAR")),
                       ),
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: InkWell(
+                      onTap: () {
+                        List<reportCSV> data = [];
+                        for (var i = 0; i < _datainput.length; i++) {
+                          data.add(
+                            reportCSV(
+                              F01: _datainput[i].CP,
+                              F02: _datainput[i].FG,
+                              F03: _datainput[i].CUSTOMER,
+                              F04: _datainput[i].PART,
+                              F05: _datainput[i].MATERIAL,
+                              F06: _datainput[i].STATUS,
+                            ),
+                          );
+                        }
+                        ExpCSV(data);
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 150,
+                        color: Colors.blue,
+                        child: Center(child: Text("EXPORT")),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -347,4 +379,36 @@ class _MATCPlistMAINState extends State<MATCPlistMAIN> {
       ),
     );
   }
+}
+
+ExpCSV(List<reportCSV> data) {
+  List<List<dynamic>> rows = [];
+
+  for (int i = -1; i < data.length; i++) {
+    List<dynamic> row = [];
+    if (i == -1) {
+      row.add('CP');
+      row.add('FG');
+      row.add('CUSTOMMER');
+      row.add('PART');
+      row.add('MATERIAL');
+      row.add('STATUS');
+
+      //F73
+    } else {
+      row.add(data[i].F01);
+      row.add(data[i].F02);
+      row.add(data[i].F03);
+      row.add(data[i].F04);
+      row.add(data[i].F05);
+      row.add(data[i].F06);
+    }
+
+    rows.add(row);
+  }
+  String datetada = "${selectedDate.toLocal()}".split(' ')[0];
+  String csv = const ListToCsvConverter().convert(rows);
+  AnchorElement(href: "data:text/plain;charset=utf-8,$csv")
+    ..setAttribute("download", "${USERDATA.MASTER}(${datetada}).csv")
+    ..click();
 }

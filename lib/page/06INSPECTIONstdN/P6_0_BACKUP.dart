@@ -1160,6 +1160,13 @@ class _INSFINALBACKUPState extends State<INSFINALBACKUP> {
                                     P6INSPECTIONstdNvar_FINAL.METHOD = d;
                                     print(d);
                                     final response = await Dio().post(
+                                      options: Options(
+                                        // contentType: "application/json",
+
+                                        headers: {
+                                          "server": USERDATA.MASTER,
+                                        },
+                                      ),
                                       serverGB + "GET_FINAL_DOCUMENT",
                                       data: {
                                         "ITEMs":

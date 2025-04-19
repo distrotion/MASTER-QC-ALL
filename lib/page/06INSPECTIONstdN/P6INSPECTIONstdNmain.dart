@@ -10,6 +10,7 @@ import '../../bloc/BlocEvent/ChangePageEvent.dart';
 import '../../bloc/cubit/Rebuild.dart';
 import '../../data/global.dart';
 import '../../mainBody.dart';
+import '../../model/model.dart';
 import '../../widget/TABLE/11-PATTRENtable.dart';
 import '../../widget/common/Advancedropdown.dart';
 import '../../widget/common/ComInputText.dart';
@@ -250,78 +251,104 @@ class _P6P6InspectionSTDNmainState extends State<P6P6InspectionSTDNmain> {
               height: 300,
               width: 2750,
               // width: 1000,
-              child: Column(
+              child: Row(
                 children: [
-                  // SizedBox(
-                  //   height: 40,
-                  // )
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: SizedBox(
-                      width: 400,
-                      child: InkWell(
-                        onTap: () async {
-                          if (P6INSPECTIONstdNvar_BASIC.CP != "") {
-                            var picked = await FilePicker.platform.pickFiles();
-                            Uint8List? imageByte;
-                            Uint8List? resizedData;
+                  Column(
+                    children: [
+                      // SizedBox(
+                      //   height: 40,
+                      // )
+                      SizedBox(
+                        width: 400,
+                        child: InkWell(
+                          onTap: () async {
+                            if (P6INSPECTIONstdNvar_BASIC.CP != "") {
+                              var picked =
+                                  await FilePicker.platform.pickFiles();
+                              Uint8List? imageByte;
+                              Uint8List? resizedData;
 
-                            if (picked != null) {
-                              imageByte = picked.files.first.bytes;
-                              IMG.Image? img = IMG.decodeImage(imageByte!);
-                              // IMG.Image? img2 = IMG.copyResize(img!, width: 500);
-                              resizedData = IMG.encodeJpg(img!) as Uint8List?;
-                              setState(() {
-                                P6INSPECTIONstdNvar_BASIC.PICUPLOAD =
-                                    "data:image/jpeg;base64," +
-                                        base64.encode(resizedData!);
-                                // print(P6INSPECTIONstdNvar_BASIC.PICUPLOAD);
-                                if (P6INSPECTIONstdNvar_BASIC.PICUPLOAD != "") {
-                                  context
-                                      .read<P6UPLOADSPEC_Bloc>()
-                                      .add(UPLOAD_PIC());
-                                }
-                              });
+                              if (picked != null) {
+                                imageByte = picked.files.first.bytes;
+                                IMG.Image? img = IMG.decodeImage(imageByte!);
+                                // IMG.Image? img2 = IMG.copyResize(img!, width: 500);
+                                resizedData = IMG.encodeJpg(img!) as Uint8List?;
+                                setState(() {
+                                  P6INSPECTIONstdNvar_BASIC.PICUPLOAD =
+                                      "data:image/jpeg;base64," +
+                                          base64.encode(resizedData!);
+                                  // print(P6INSPECTIONstdNvar_BASIC.PICUPLOAD);
+                                  if (P6INSPECTIONstdNvar_BASIC.PICUPLOAD !=
+                                      "") {
+                                    context
+                                        .read<P6UPLOADSPEC_Bloc>()
+                                        .add(UPLOAD_PIC());
+                                  }
+                                });
+                              }
                             }
-                          }
-                        },
-                        child: Container(
-                          height: 40,
-                          width: 100,
-                          color: Colors.green,
-                          child: Center(
-                            child: Text("UPLOAD PIC"),
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 100,
+                            color: Colors.green,
+                            child: Center(
+                              child: Text("UPLOAD PIC"),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      if ((widget.Mdata?.Pimg ?? '') != '') ...[
-                        PicShowW(
-                          base64: widget.Mdata?.Pimg ?? '',
-                          height: 200,
-                          width: 400,
-                        )
-                      ] else ...[
-                        Container(
-                          height: 200,
-                          width: 400,
-                          color: Colors.grey.shade400,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: const [
-                              SizedBox(width: 30),
-                              CircularProgressIndicator(),
-                              SizedBox(width: 20),
-                              Text("Loading"),
-                            ],
-                          ),
-                        )
-                      ],
+                      Row(
+                        children: [
+                          if ((widget.Mdata?.Pimg ?? '') != '') ...[
+                            PicShowW(
+                              base64: widget.Mdata?.Pimg ?? '',
+                              height: 200,
+                              width: 400,
+                            )
+                          ] else ...[
+                            Container(
+                              height: 200,
+                              width: 400,
+                              color: Colors.grey.shade400,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  SizedBox(width: 30),
+                                  CircularProgressIndicator(),
+                                  SizedBox(width: 20),
+                                  Text("Loading"),
+                                ],
+                              ),
+                            )
+                          ],
+                        ],
+                      ),
                     ],
                   ),
+                  //reportset
+                  Column(
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 150,
+                        color: Colors.green,
+                        child: Center(
+                          child: Text(
+                            "",
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 150,
+                        // color: Colors.red,
+                        child: Center(
+                          child: Text(_Mdata.reportset),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),

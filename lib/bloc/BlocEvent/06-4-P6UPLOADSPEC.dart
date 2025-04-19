@@ -149,6 +149,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "FINAL_SAVE",
       data: query,
     );
@@ -176,9 +183,8 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
 
   Future<void> _P6UPLOADSPEC_FINAL_NUM(
       String toAdd, Emitter<String> emit) async {
-    print("---------------4");
     String output = '';
-    print(INSPECTIONstdVAR.CP);
+
     var query = {
       "CPorder": {
         "CP": P6INSPECTIONstdNvar_BASIC.CP,
@@ -255,6 +261,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "FINAL_SAVE",
       data: query,
     );
@@ -352,6 +365,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "FINAL_DELETE",
       data: query,
     );
@@ -394,6 +414,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "PIC_UPLOAD",
       data: query,
     );
@@ -485,6 +512,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INCOMMING_SAVE",
       data: query,
     );
@@ -584,6 +618,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INCOMMING_SAVE",
       data: query,
     );
@@ -681,6 +722,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INCOMMING_DELETE",
       data: query,
     );
@@ -776,6 +824,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INPROCESS_SAVE",
       data: query,
     );
@@ -878,6 +933,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INPROCESS_SAVE",
       data: query,
     );
@@ -976,6 +1038,13 @@ class P6UPLOADSPEC_Bloc extends Bloc<P6UPLOADSPEC_Event, String> {
     };
 
     final response = await Dio().post(
+      options: Options(
+        // contentType: "application/json",
+
+        headers: {
+          "server": USERDATA.MASTER,
+        },
+      ),
       serverGB + "INPROCESS_DELETE",
       data: query,
     );

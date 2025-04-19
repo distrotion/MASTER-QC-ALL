@@ -905,32 +905,241 @@ class _INSFINALState extends State<INSFINAL> {
                                             height: 40,
                                             width: 80,
                                           ),
-                                          AdvanceDropDown(
-                                            isEnable: P6INSPECTIONstdNvar_FINAL
-                                                        .RESULTFORMAT !=
-                                                    'CAL1' &&
-                                                P6INSPECTIONstdNvar_FINAL
-                                                        .RESULTFORMAT !=
-                                                    'CAL2',
-                                            imgpath:
-                                                'assets/icons/icon-down_4@3x.png',
-                                            listdropdown: [
-                                              MapEntry("-", "-"),
-                                              MapEntry("sheet", "sheet"),
-                                              MapEntry("cylinder", "cylinder"),
-                                              MapEntry("tube", "tube")
+                                          if (P6INSPECTIONstdNvar_FINAL.K1b ==
+                                              '2') ...[
+                                            AdvanceDropDown(
+                                              isEnable:
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                              .RESULTFORMAT !=
+                                                          'CAL1' &&
+                                                      P6INSPECTIONstdNvar_FINAL
+                                                              .RESULTFORMAT !=
+                                                          'CAL2',
+                                              imgpath:
+                                                  'assets/icons/icon-down_4@3x.png',
+                                              listdropdown: [
+                                                MapEntry("-", "-"),
+                                                MapEntry("sheet", "sheet"),
+                                                MapEntry(
+                                                    "cylinder", "cylinder"),
+                                                MapEntry("tube", "tube")
+                                              ],
+                                              onChangeinside: (d, k) {
+                                                setState(() {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .shape = d;
+                                                });
+                                              },
+                                              value: P6INSPECTIONstdNvar_FINAL
+                                                  .shape,
+                                              height: 40,
+                                              width: 80,
+                                            ),
+                                            if (P6INSPECTIONstdNvar_FINAL
+                                                    .shape ==
+                                                'sheet') ...[
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Ksw1",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Ksw2",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Ksh",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
                                             ],
-                                            onChangeinside: (d, k) {
-                                              setState(() {
-                                                P6INSPECTIONstdNvar_FINAL
-                                                    .shape = d;
-                                              });
-                                            },
-                                            value:
-                                                P6INSPECTIONstdNvar_FINAL.shape,
-                                            height: 40,
-                                            width: 80,
-                                          ),
+                                            if (P6INSPECTIONstdNvar_FINAL
+                                                    .shape ==
+                                                'cylinder') ...[
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Kcr",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Kch",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                            ],
+                                            if (P6INSPECTIONstdNvar_FINAL
+                                                    .shape ==
+                                                'tube') ...[
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Ktr1",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Ktr2",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                              ComInputText(
+                                                nLimitedChar: 100,
+                                                sLabel: "Kth1",
+                                                isNumberOnly: true,
+                                                height: 40,
+                                                width: 200,
+                                                isContr:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol,
+                                                // isEnabled: P6INSPECTIONstdNvar_FINAL.ACTION_isEnabled,
+                                                fnContr: (input) {
+                                                  setState(() {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .iscontrol = input;
+                                                  });
+                                                },
+                                                sValue:
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .K1v,
+                                                returnfunc: (String s) {
+                                                  P6INSPECTIONstdNvar_FINAL
+                                                      .K1v = s;
+                                                },
+                                              ),
+                                            ],
+                                          ],
                                           if (P6INSPECTIONstdNvar_FINAL.K1b ==
                                               '1') ...[
                                             ComInputText(
@@ -1128,6 +1337,13 @@ class _INSFINALState extends State<INSFINAL> {
                                                   d;
                                               print(d);
                                               final response = await Dio().post(
+                                                options: Options(
+                                                  // contentType: "application/json",
+
+                                                  headers: {
+                                                    "server": USERDATA.MASTER,
+                                                  },
+                                                ),
                                                 serverGB + "GET_FINAL_DOCUMENT",
                                                 data: {
                                                   "ITEMs":

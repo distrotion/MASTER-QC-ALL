@@ -11,6 +11,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 Future<dynamic> P6INSPECTION_FINAL_GET_STEP1(String CP) async {
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_FINAL_GET_STEP1",
     data: {
       "MATCP": CP,
@@ -27,6 +34,13 @@ Future<dynamic> P6INSPECTION_FINAL_GET_STEP2(String ITEMs) async {
   var databuff;
 
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_FINAL_GET_STEP2",
     data: {
       "ITEMs": ITEMs,
@@ -58,6 +72,13 @@ Future<dynamic> P6INSPECTION_INCOMMING_GET_STEP2(String ITEMs) async {
   var databuff;
 
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_INCOMMING_GET_STEP2",
     data: {
       "ITEMs": ITEMs,
@@ -73,6 +94,13 @@ Future<dynamic> P6INSPECTION_INCOMMING_GET_STEP2(String ITEMs) async {
 
 Future<dynamic> P6INSPECTION_INPROCESS_GET_STEP1(String CP) async {
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_INPROCESS_GET_STEP1",
     data: {
       "MATCP": CP,
@@ -89,6 +117,13 @@ Future<dynamic> P6INSPECTION_INPROCESS_GET_STEP2(String ITEMs) async {
   var databuff;
 
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_INPROCESS_GET_STEP2",
     data: {
       "ITEMs": ITEMs,
@@ -104,6 +139,13 @@ Future<dynamic> P6INSPECTION_INPROCESS_GET_STEP2(String ITEMs) async {
 
 Future<dynamic> P6COPYDATA(String CP_MASTER, String CP_NEW) async {
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "copy_cp",
     data: {
       "CP_MASTER": CP_MASTER,

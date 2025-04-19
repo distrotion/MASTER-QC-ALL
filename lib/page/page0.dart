@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/global.dart';
 import 'TEST.dart';
 import 'page10.dart';
+import 'page11.dart';
 import 'page2.dart';
 import 'page4.dart';
 import 'page5.dart';
@@ -25,10 +26,10 @@ class Page0Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (serverGB == '') {
-      return Page10();
-    } else {
-      return Page4();
-    }
+    // if (serverGB == '') {
+    return Page10();
+    // } else {
+    //   return Page4();
+    // }
   }
 }

@@ -1139,6 +1139,13 @@ class _INPROCESSState extends State<INPROCESS> {
                                                   .METHOD = d;
                                               print(d);
                                               final response = await Dio().post(
+                                                options: Options(
+                                                  // contentType: "application/json",
+
+                                                  headers: {
+                                                    "server": USERDATA.MASTER,
+                                                  },
+                                                ),
                                                 serverGB +
                                                     "GET_INPROCESS_DOCUMENT",
                                                 data: {
