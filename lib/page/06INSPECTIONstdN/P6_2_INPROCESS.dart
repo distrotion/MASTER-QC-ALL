@@ -354,6 +354,7 @@ class _INPROCESSState extends State<INPROCESS> {
                               //---------------------
 
                               P6INSPECTIONstdNvar_INPROCESS.List_ITEMs = [
+                                MapEntry("", ""),
                                 MapEntry("-", "-")
                               ];
                               P6INSPECTIONstdNvar_INPROCESS.List_ITEMs.add(
@@ -1006,6 +1007,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("Kcon.", "1"),
                                               MapEntry("Kvar.", "2")
@@ -1077,6 +1079,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                               imgpath:
                                                   'assets/icons/icon-down_4@3x.png',
                                               listdropdown: [
+                                                MapEntry("", ""),
                                                 MapEntry("-", "-"),
                                                 MapEntry("TYPE 1", "1"),
                                                 MapEntry("TYPE 2", "2")
@@ -1229,6 +1232,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                                 imgpath:
                                                     'assets/icons/icon-down_4@3x.png',
                                                 listdropdown: [
+                                                  MapEntry("", ""),
                                                   const MapEntry("-", "-"),
                                                   const MapEntry("BTW", "BTW"),
                                                   const MapEntry(
@@ -1465,6 +1469,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1516,6 +1521,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                                   imgpath:
                                                       'assets/icons/icon-down_4@3x.png',
                                                   listdropdown: [
+                                                    MapEntry("", ""),
                                                     MapEntry("-", "-"),
                                                     MapEntry("AQL", "YES"),
                                                   ],
@@ -1647,6 +1653,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1671,6 +1678,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("YES", "YES"),
                                               MapEntry("NO", "NO")
@@ -1721,6 +1729,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO"),
@@ -1743,6 +1752,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO"),
@@ -1788,6 +1798,7 @@ class _INPROCESSState extends State<INPROCESS> {
                                               imgpath:
                                                   'assets/icons/icon-down_4@3x.png',
                                               listdropdown: [
+                                                MapEntry("", ""),
                                                 MapEntry("-", "-"),
                                                 MapEntry("X", "X"),
                                                 MapEntry("X-Y", "X-Y"),

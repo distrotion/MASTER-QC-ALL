@@ -46,7 +46,7 @@ class MainContext extends MyApp {
     return BlocBuilder<BlocPageRebuild, bool>(
       builder: (_, e) {
         return MaterialApp(
-          title: 'PH HES',
+          title: 'QC',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),

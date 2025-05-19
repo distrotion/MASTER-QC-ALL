@@ -80,7 +80,11 @@ class P6FINSPECTIONget_Bloc
     );
     if (response.statusCode == 200) {
       var databuff = response.data;
-      // print(databuff);
+
+      if (databuff.length == 0) {
+        Navigator.pop(P6P6InspectionSTDNmaincontext);
+        emit(output);
+      }
 
       output.status = 'GET_ALL';
 
@@ -478,9 +482,27 @@ class P6FINSPECTIONget_Bloc
 
         if (input.contains("SPECIFICATION-")) {
           for (int i = 0; i < findSPECIFICATION_FN.length; i++) {
+            print(findSPECIFICATION_FN[i].NAME);
+
             if (input == findSPECIFICATION_FN[i].masterID) {
               output = findSPECIFICATION_FN[i].NAME;
+
               break;
+            }
+          }
+          if (input.contains("{") && input.contains("}")) {
+            Map<String, dynamic> data = jsonStringToMap(input);
+
+            String dataset =
+                data['condition'] != null ? data['condition'].toString() : "";
+            for (int i = 0; i < findSPECIFICATION_FN.length; i++) {
+              // print(findSPECIFICATION_FN[i].NAME);
+
+              if (dataset == findSPECIFICATION_FN[i].masterID) {
+                output = findSPECIFICATION_FN[i].NAME;
+
+                break;
+              }
             }
           }
         } else {
@@ -517,6 +539,21 @@ class P6FINSPECTIONget_Bloc
               break;
             }
           }
+          if (input.contains("{") && input.contains("}")) {
+            Map<String, dynamic> data = jsonStringToMap(input);
+
+            String dataset =
+                data['condition'] != null ? data['condition'].toString() : "";
+            for (int i = 0; i < findSPECIFICATION_FN.length; i++) {
+              // print(findSPECIFICATION_FN[i].NAME);
+
+              if (dataset == findSPECIFICATION_FN[i].masterID) {
+                output = findSPECIFICATION_FN[i].NAME;
+
+                break;
+              }
+            }
+          }
         } else {
           if (input.contains("{") && input.contains("}")) {
             Map<String, dynamic> data = jsonStringToMap(input);
@@ -545,10 +582,26 @@ class P6FINSPECTIONget_Bloc
         String output = "";
 
         if (input.contains("SPECIFICATION-")) {
+          print("3${input}");
           for (int i = 0; i < findSPECIFICATION_IP.length; i++) {
             if (input == findSPECIFICATION_IP[i].masterID) {
               output = findSPECIFICATION_IP[i].NAME;
               break;
+            }
+          }
+          if (input.contains("{") && input.contains("}")) {
+            Map<String, dynamic> data = jsonStringToMap(input);
+
+            String dataset =
+                data['condition'] != null ? data['condition'].toString() : "";
+            for (int i = 0; i < findSPECIFICATION_FN.length; i++) {
+              // print(findSPECIFICATION_FN[i].NAME);
+
+              if (dataset == findSPECIFICATION_FN[i].masterID) {
+                output = findSPECIFICATION_FN[i].NAME;
+
+                break;
+              }
             }
           }
         } else {
@@ -568,6 +621,7 @@ class P6FINSPECTIONget_Bloc
                 data['condition'] == "HIM(>)") {
               output = ' ≥ ${data['HIM_L']}';
             }
+            print("3${data['condition']}");
           } else {
             output = input;
           }
@@ -808,6 +862,9 @@ class P6FINSPECTIONget_Bloc
               //     ? databuff[0]['FINAL'][i]['REMARK'].toString()
               //     : '',
               REMARK: COMMENT,
+              CORStype: databuff[0]['FINAL'][i]['CORStype'] != null
+                  ? databuff[0]['FINAL'][i]['CORStype'].toString()
+                  : '',
               LOAD: databuff[0]['FINAL'][i]['LOAD'] != null
                   ? databuff[0]['FINAL'][i]['LOAD'].toString()
                   : '',
@@ -1136,6 +1193,9 @@ class P6FINSPECTIONget_Bloc
               //     ? databuff[0]['INCOMMING'][i]['REMARK'].toString()
               //     : '',
               REMARK: COMMENT,
+              CORStype: databuff[0]['FINAL'][i]['CORStype'] != null
+                  ? databuff[0]['FINAL'][i]['CORStype'].toString()
+                  : '',
               LOAD: databuff[0]['INCOMMING'][i]['LOAD'] != null
                   ? databuff[0]['INCOMMING'][i]['LOAD'].toString()
                   : '',
@@ -1446,6 +1506,10 @@ class P6FINSPECTIONget_Bloc
               //     ? databuff[0]['INPROCESS'][i]['REMARK'].toString()
               //     : '',
               REMARK: COMMENT,
+              CORStype: databuff[0]['FINAL'][i]['CORStype'] != null
+                  ? databuff[0]['FINAL'][i]['CORStype'].toString()
+                  : '',
+
               LOAD: databuff[0]['INPROCESS'][i]['LOAD'] != null
                   ? databuff[0]['INPROCESS'][i]['LOAD'].toString()
                   : '',
@@ -1524,6 +1588,9 @@ class P6FINSPECTIONget_Bloc
       if (databuff[0]['reportset'] != null) {
         output.reportset = databuff[0]['reportset'].toString();
       }
+      if (databuff[0]['logoset'] != null) {
+        output.logoset = databuff[0]['logoset'].toString();
+      }
     }
 
     Navigator.pop(P6P6InspectionSTDNmaincontext);
@@ -1558,6 +1625,7 @@ class P6InspectionSTD {
     this.Pimg = '',
     this.CUST_FULLNM = '',
     this.reportset = '',
+    this.logoset = '',
   });
   String status;
   String MATCP;
@@ -1575,6 +1643,7 @@ class P6InspectionSTD {
   String CUST_FULLNM;
 
   String reportset;
+  String logoset;
 }
 
 class speckSTD {
@@ -1614,6 +1683,7 @@ class speckSTD {
     this.FREQUENCYname = '',
     this.MODE = '',
     this.REMARK = '',
+    this.CORStype = '',
     this.LOAD = '',
     this.SWreport = '',
     this.K1b = '',
@@ -1672,6 +1742,7 @@ class speckSTD {
   String FREQUENCYname;
   String MODE;
   String REMARK;
+  String CORStype;
   String LOAD;
 
   String SWreport;

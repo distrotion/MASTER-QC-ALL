@@ -56,6 +56,13 @@ Future<dynamic> P6INSPECTION_FINAL_GET_STEP2(String ITEMs) async {
 
 Future<dynamic> P6INSPECTION_INCOMMING_GET_STEP1(String CP) async {
   final response = await Dio().post(
+    options: Options(
+      // contentType: "application/json",
+
+      headers: {
+        "server": USERDATA.MASTER,
+      },
+    ),
     serverGB + "INSPECTION_INCOMMING_GET_STEP1",
     data: {
       "MATCP": CP,

@@ -952,6 +952,7 @@ class _INSFINALBACKUPState extends State<INSFINALBACKUP> {
                                           'CAL1',
                                   imgpath: 'assets/icons/icon-down_4@3x.png',
                                   listdropdown: [
+                                    MapEntry("", ""),
                                     MapEntry("-", "-"),
                                     MapEntry("Kcon.", "1"),
                                     MapEntry("Kvar.", "2")
@@ -1116,6 +1117,7 @@ class _INSFINALBACKUPState extends State<INSFINALBACKUP> {
                                   AdvanceDropDown(
                                     imgpath: 'assets/icons/icon-down_4@3x.png',
                                     listdropdown: [
+                                      MapEntry("", ""),
                                       MapEntry("-", "-"),
                                       MapEntry("TYPE 1", "1"),
                                       MapEntry("TYPE 2", "2")
@@ -1282,6 +1284,7 @@ class _INSFINALBACKUPState extends State<INSFINALBACKUP> {
                                       imgpath:
                                           'assets/icons/icon-down_4@3x.png',
                                       listdropdown: [
+                                        MapEntry("", ""),
                                         const MapEntry("-", "-"),
                                         const MapEntry("BTW", "BTW"),
                                         const MapEntry("Lower", "LOL(<)"),
@@ -1504,6 +1507,7 @@ class _INSFINALBACKUPState extends State<INSFINALBACKUP> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("AQL", "AQL"),
                                         ],

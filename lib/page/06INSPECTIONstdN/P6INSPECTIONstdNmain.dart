@@ -46,6 +46,8 @@ class _P6P6InspectionSTDNmainState extends State<P6P6InspectionSTDNmain> {
     P6ClearFINAL();
     //24000004
     // P6INSPECTIONstdNvar_BASIC.CP = "24000004";
+    P6INSPECTIONstdNvar_BASIC.reportset = '-';
+    P6INSPECTIONstdNvar_BASIC.logoset = '-';
     context.read<P6FINSPECTIONget_Bloc>().add(P6FINSPECTIONget_MATCP());
   }
 
@@ -329,13 +331,58 @@ class _P6P6InspectionSTDNmainState extends State<P6P6InspectionSTDNmain> {
                   //reportset
                   Column(
                     children: [
-                      Container(
-                        height: 40,
-                        width: 150,
-                        color: Colors.green,
-                        child: Center(
-                          child: Text(
-                            "",
+                      SizedBox(
+                        height: 68,
+                        width: 200,
+                        child: AdvanceDropDown(
+                          sLabel: "Report set",
+                          imgpath: 'assets/icons/icon-down_4@3x.png',
+                          listdropdown: P6INSPECTIONstdNvar_BASIC.reportlist,
+                          onChangeinside: (d, v) {
+                            // print(d);
+                            setState(() {
+                              P6INSPECTIONstdNvar_BASIC.reportset = d;
+                            });
+                          },
+                          value: P6INSPECTIONstdNvar_BASIC.reportset,
+                          height: 40,
+                          width: 100,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          //P6INSPECTIONstdNvar_BASIC.CP
+
+                          Dio().post(
+                            options: Options(
+                              // contentType: "application/json",
+
+                              headers: {
+                                "server": USERDATA.MASTER,
+                              },
+                            ),
+                            serverGB + "reportset_UPLOAD",
+                            data: {
+                              "CP": P6INSPECTIONstdNvar_BASIC.CP,
+                              "reportset": P6INSPECTIONstdNvar_BASIC.reportset,
+                            },
+                          ).then((v) {
+                            var databuff = v.data;
+                            context
+                                .read<P6FINSPECTIONget_Bloc>()
+                                .add(P6FINSPECTIONget_MATCP());
+                            // setState(() {});
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Container(
+                            width: 200,
+                            height: 40,
+                            color: Colors.blue,
+                            child: Center(
+                              child: Text("SAVE"),
+                            ),
                           ),
                         ),
                       ),
@@ -348,7 +395,74 @@ class _P6P6InspectionSTDNmainState extends State<P6P6InspectionSTDNmain> {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 68,
+                        width: 200,
+                        child: AdvanceDropDown(
+                          sLabel: "Logo set",
+                          imgpath: 'assets/icons/icon-down_4@3x.png',
+                          listdropdown: P6INSPECTIONstdNvar_BASIC.logolist,
+                          onChangeinside: (d, v) {
+                            // print(d);
+                            setState(() {
+                              P6INSPECTIONstdNvar_BASIC.logoset = d;
+                            });
+                          },
+                          value: P6INSPECTIONstdNvar_BASIC.logoset,
+                          height: 40,
+                          width: 100,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          //P6INSPECTIONstdNvar_BASIC.CP
+
+                          Dio().post(
+                            options: Options(
+                              // contentType: "application/json",
+
+                              headers: {
+                                "server": USERDATA.MASTER,
+                              },
+                            ),
+                            serverGB + "logoset_UPLOAD",
+                            data: {
+                              "CP": P6INSPECTIONstdNvar_BASIC.CP,
+                              "logoset": P6INSPECTIONstdNvar_BASIC.logoset,
+                            },
+                          ).then((v) {
+                            var databuff = v.data;
+                            context
+                                .read<P6FINSPECTIONget_Bloc>()
+                                .add(P6FINSPECTIONget_MATCP());
+                            // setState(() {});
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Container(
+                            width: 200,
+                            height: 40,
+                            color: Colors.blue,
+                            child: Center(
+                              child: Text("SAVE"),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 150,
+                        // color: Colors.red,
+                        child: Center(
+                          child: Text(_Mdata.logoset),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

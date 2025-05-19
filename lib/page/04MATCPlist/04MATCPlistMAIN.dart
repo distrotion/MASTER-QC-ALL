@@ -175,6 +175,7 @@ class _MATCPlistMAINState extends State<MATCPlistMAIN> {
                             ),
                           );
                         }
+                        // print(data.length);
                         ExpCSV(data);
                       },
                       child: Container(
@@ -406,8 +407,11 @@ ExpCSV(List<reportCSV> data) {
 
     rows.add(row);
   }
+  print(rows.length);
   String datetada = "${selectedDate.toLocal()}".split(' ')[0];
-  String csv = const ListToCsvConverter().convert(rows);
+  String csv = const ListToCsvConverter().convert(rows).replaceAll("#", "");
+  // final csv = Uri.encodeComponent(rows.toString());
+
   AnchorElement(href: "data:text/plain;charset=utf-8,$csv")
     ..setAttribute("download", "${USERDATA.MASTER}(${datetada}).csv")
     ..click();

@@ -5,6 +5,7 @@ import '../../bloc/BlocEvent/ChangePageEvent.dart';
 import '../../data/global.dart';
 import '../../mainBody.dart';
 import '../../widget/common/Loading.dart';
+import '../06INSPECTIONstdN/P6INSPECTIONstdNvar.dart';
 import '../page4.dart';
 
 class P10SELECTPLANTmain extends StatelessWidget {
@@ -21,6 +22,9 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
+
                   USERDATA.MASTER = "HES-PH";
 
                   CuPage = Page4();
@@ -47,6 +51,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "HES-PAL";
 
                   CuPage = Page4();
@@ -73,6 +79,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "BP12-PAL";
 
                   CuPage = Page4();
@@ -99,6 +107,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "BP12-PVD";
 
                   CuPage = Page4();
@@ -125,6 +135,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "BP12-KNG";
 
                   CuPage = Page4();
@@ -151,6 +163,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "BP12-PH";
 
                   CuPage = Page4();
@@ -177,6 +191,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "HES-GAS";
 
                   CuPage = Page4();
@@ -203,6 +219,7 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "GW-GAS";
 
                   CuPage = Page4();
@@ -229,6 +246,8 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  P6INSPECTIONstdNvar_BASIC.reportlist = [MapEntry("-", "-")];
+                  P6INSPECTIONstdNvar_BASIC.logolist = [MapEntry("-", "-")];
                   USERDATA.MASTER = "BP12-GAS";
 
                   CuPage = Page4();
@@ -255,6 +274,12 @@ class P10SELECTPLANTmain extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InkWell(
                 onTap: () {
+                  //
+                  P6INSPECTIONstdNvar_BASIC.reportlist =
+                      P6INSPECTIONstdNvar_BASIC.HESISNreport;
+                  P6INSPECTIONstdNvar_BASIC.logolist =
+                      P6INSPECTIONstdNvar_BASIC.HESISNlogo;
+                  //
                   USERDATA.MASTER = "HES-ISN";
 
                   CuPage = Page4();

@@ -139,10 +139,22 @@ class _INSFINALState extends State<INSFINAL> {
                       SizedBox(
                         height: 40,
                         child: PATTERNtable(
-                          ShowCORStype: false,
-                          ShowLOAD: false,
-                          ShowGT: false,
-                          ShowCONVERSE: false,
+                          ShowCORStype: USERDATA.MASTER == "HES-ISN" ||
+                              USERDATA.MASTER == "BP12-GAS" ||
+                              USERDATA.MASTER == "GW-GAS" ||
+                              USERDATA.MASTER == "HES-GAS",
+                          ShowLOAD: USERDATA.MASTER == "HES-ISN" ||
+                              USERDATA.MASTER == "BP12-GAS" ||
+                              USERDATA.MASTER == "GW-GAS" ||
+                              USERDATA.MASTER == "HES-GAS",
+                          ShowGT: USERDATA.MASTER == "HES-ISN" ||
+                              USERDATA.MASTER == "BP12-GAS" ||
+                              USERDATA.MASTER == "GW-GAS" ||
+                              USERDATA.MASTER == "HES-GAS",
+                          ShowCONVERSE: USERDATA.MASTER == "HES-ISN" ||
+                              USERDATA.MASTER == "BP12-GAS" ||
+                              USERDATA.MASTER == "GW-GAS" ||
+                              USERDATA.MASTER == "HES-GAS",
                           ShowFORMULA: false,
                           BGColorMain: Colors.grey.shade400,
                           seq: "seq",
@@ -182,10 +194,26 @@ class _INSFINALState extends State<INSFINAL> {
                         Container(
                           height: 40,
                           child: PATTERNtable(
-                            ShowCORStype: false,
-                            ShowLOAD: false,
-                            ShowGT: false,
-                            ShowCONVERSE: false,
+                            // ShowCORStype: false,
+                            // ShowLOAD: false,
+                            // ShowGT: false,
+                            // ShowCONVERSE: false,
+                            ShowCORStype: USERDATA.MASTER == "HES-ISN" ||
+                                USERDATA.MASTER == "BP12-GAS" ||
+                                USERDATA.MASTER == "GW-GAS" ||
+                                USERDATA.MASTER == "HES-GAS",
+                            ShowLOAD: USERDATA.MASTER == "HES-ISN" ||
+                                USERDATA.MASTER == "BP12-GAS" ||
+                                USERDATA.MASTER == "GW-GAS" ||
+                                USERDATA.MASTER == "HES-GAS",
+                            ShowGT: USERDATA.MASTER == "HES-ISN" ||
+                                USERDATA.MASTER == "BP12-GAS" ||
+                                USERDATA.MASTER == "GW-GAS" ||
+                                USERDATA.MASTER == "HES-GAS",
+                            ShowCONVERSE: USERDATA.MASTER == "HES-ISN" ||
+                                USERDATA.MASTER == "BP12-GAS" ||
+                                USERDATA.MASTER == "GW-GAS" ||
+                                USERDATA.MASTER == "HES-GAS",
                             ShowFORMULA: false,
                             BGColorMain: i.isEven
                                 ? Colors.grey.shade50
@@ -200,7 +228,7 @@ class _INSFINALState extends State<INSFINAL> {
                             VARY: _Mdata.FINAL[i].VARY,
                             VARZ: _Mdata.FINAL[i].VARZ,
                             VARI: _Mdata.FINAL[i].VARI,
-                            CORStype: "-",
+                            CORStype: _Mdata.FINAL[i].CORStype,
                             FORMULA: "-",
                             SCMARK: _Mdata.FINAL[i].SCMARK,
                             SCMARKtype: "-",
@@ -239,6 +267,7 @@ class _INSFINALState extends State<INSFINAL> {
                                   _Mdata.FINAL[i].seq;
                               //---------------------
                               P6INSPECTIONstdNvar_FINAL.List_ITEMs = [
+                                MapEntry("", ""),
                                 MapEntry("-", "-")
                               ];
                               P6INSPECTIONstdNvar_FINAL.List_ITEMs.add(
@@ -489,6 +518,9 @@ class _INSFINALState extends State<INSFINAL> {
                                   _Mdata.FINAL[i].FREQUENCY;
                               // P6INSPECTIONstdNvar_FINAL.REMARK = _Mdata.FINAL[i].REMARK;
                               // P6INSPECTIONstdNvar_FINAL.RESULTFORMATdata = _Mdata.FINAL[i].RESULTFORMATdata;
+
+                              P6INSPECTIONstdNvar_FINAL.CORStype =
+                                  _Mdata.FINAL[i].CORStype;
                               P6INSPECTIONstdNvar_FINAL.SWreport =
                                   _Mdata.FINAL[i].SWreport;
                               P6INSPECTIONstdNvar_FINAL.SUMDATA =
@@ -571,10 +603,28 @@ class _INSFINALState extends State<INSFINAL> {
                                   SizedBox(
                                     height: 40,
                                     child: PATTERNtable(
-                                      ShowCORStype: false,
-                                      ShowLOAD: false,
-                                      ShowGT: false,
-                                      ShowCONVERSE: false,
+                                      // ShowCORStype: false,
+                                      // ShowLOAD: false,
+                                      // ShowGT: false,
+                                      // ShowCONVERSE: false,
+                                      ShowCORStype:
+                                          USERDATA.MASTER == "HES-ISN" ||
+                                              USERDATA.MASTER == "BP12-GAS" ||
+                                              USERDATA.MASTER == "GW-GAS" ||
+                                              USERDATA.MASTER == "HES-GAS",
+                                      ShowLOAD: USERDATA.MASTER == "HES-ISN" ||
+                                          USERDATA.MASTER == "BP12-GAS" ||
+                                          USERDATA.MASTER == "GW-GAS" ||
+                                          USERDATA.MASTER == "HES-GAS",
+                                      ShowGT: USERDATA.MASTER == "HES-ISN" ||
+                                          USERDATA.MASTER == "BP12-GAS" ||
+                                          USERDATA.MASTER == "GW-GAS" ||
+                                          USERDATA.MASTER == "HES-GAS",
+                                      ShowCONVERSE:
+                                          USERDATA.MASTER == "HES-ISN" ||
+                                              USERDATA.MASTER == "BP12-GAS" ||
+                                              USERDATA.MASTER == "GW-GAS" ||
+                                              USERDATA.MASTER == "HES-GAS",
                                       ShowFORMULA: false,
                                       BGColorMain: Colors.grey.shade400,
                                       seq: "seq",
@@ -613,10 +663,28 @@ class _INSFINALState extends State<INSFINAL> {
                                   Container(
                                     constraints: BoxConstraints(minHeight: 80),
                                     child: PATTERNtable(
-                                      ShowCORStype: false,
-                                      ShowLOAD: false,
-                                      ShowGT: false,
-                                      ShowCONVERSE: false,
+                                      // ShowCORStype: false,
+                                      // ShowLOAD: false,
+                                      // ShowGT: false,
+                                      // ShowCONVERSE: false,
+                                      ShowCORStype:
+                                          USERDATA.MASTER == "HES-ISN" ||
+                                              USERDATA.MASTER == "BP12-GAS" ||
+                                              USERDATA.MASTER == "GW-GAS" ||
+                                              USERDATA.MASTER == "HES-GAS",
+                                      ShowLOAD: USERDATA.MASTER == "HES-ISN" ||
+                                          USERDATA.MASTER == "BP12-GAS" ||
+                                          USERDATA.MASTER == "GW-GAS" ||
+                                          USERDATA.MASTER == "HES-GAS",
+                                      ShowGT: USERDATA.MASTER == "HES-ISN" ||
+                                          USERDATA.MASTER == "BP12-GAS" ||
+                                          USERDATA.MASTER == "GW-GAS" ||
+                                          USERDATA.MASTER == "HES-GAS",
+                                      ShowCONVERSE:
+                                          USERDATA.MASTER == "HES-ISN" ||
+                                              USERDATA.MASTER == "BP12-GAS" ||
+                                              USERDATA.MASTER == "GW-GAS" ||
+                                              USERDATA.MASTER == "HES-GAS",
                                       ShowFORMULA: false,
                                       BGColorMain: Colors.white,
                                       seq: "seq",
@@ -890,6 +958,7 @@ class _INSFINALState extends State<INSFINAL> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("Kcon.", "1"),
                                               MapEntry("Kvar.", "2")
@@ -918,6 +987,7 @@ class _INSFINALState extends State<INSFINAL> {
                                               imgpath:
                                                   'assets/icons/icon-down_4@3x.png',
                                               listdropdown: [
+                                                MapEntry("", ""),
                                                 MapEntry("-", "-"),
                                                 MapEntry("sheet", "sheet"),
                                                 MapEntry(
@@ -1174,6 +1244,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1195,6 +1266,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1216,6 +1288,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1237,6 +1310,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1277,6 +1351,7 @@ class _INSFINALState extends State<INSFINAL> {
                                               imgpath:
                                                   'assets/icons/icon-down_4@3x.png',
                                               listdropdown: [
+                                                MapEntry("", ""),
                                                 MapEntry("-", "-"),
                                                 MapEntry("TYPE 1", "1"),
                                                 MapEntry("TYPE 2", "2")
@@ -1409,6 +1484,38 @@ class _INSFINALState extends State<INSFINAL> {
                                           ],
                                         ],
                                       ),
+
+                                      WIDGETLOAD: AdvanceDropDown(
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("", ""),
+                                          MapEntry("-", "-"),
+                                          MapEntry("10 gf", "10 gf"),
+                                          MapEntry("25 gf", "25 gf"),
+                                          MapEntry("50 gf", "50 gf"),
+                                          MapEntry("100 gf", "100 gf"),
+                                          MapEntry("200 gf", "200 gf"),
+                                          MapEntry("300 gf", "300 gf"),
+                                          MapEntry("500 gf", "500 gf"),
+                                          MapEntry("1 Kgf", "1 Kgf"),
+                                          MapEntry("3 Kgf", "3 Kgf"),
+                                          MapEntry("5 Kgf", "5 Kgf"),
+                                          MapEntry("10 Kgf", "10 Kgf"),
+                                          MapEntry("15 Kgf", "15 Kgf"),
+                                          MapEntry("30 Kgf", "30 Kgf"),
+                                          MapEntry("50 Kgf", "50 Kgf"),
+                                          MapEntry("60 Kgf", "60 Kgf"),
+                                          MapEntry("150 Kgf", "150 Kgf"),
+                                        ],
+                                        onChangeinside: (d, k) async {
+                                          P6INSPECTIONstdNvar_FINAL.LOAD = d;
+                                          print(d);
+                                        },
+                                        value: P6INSPECTIONstdNvar_FINAL.LOAD,
+                                        height: 40,
+                                        width: 400,
+                                      ),
                                       SPECIFICATIONve: "SPECIFICATION",
                                       WIDGETSPECIFICATIONve: Column(
                                         children: [
@@ -1418,34 +1525,64 @@ class _INSFINALState extends State<INSFINAL> {
                                               P6INSPECTIONstdNvar_FINAL
                                                       .RESULTFORMAT !=
                                                   'Picture') ...[
-                                            SizedBox(
-                                              width: 200,
-                                              child: AdvanceDropDown(
-                                                imgpath:
-                                                    'assets/icons/icon-down_4@3x.png',
-                                                listdropdown: [
-                                                  const MapEntry("-", "-"),
-                                                  const MapEntry("BTW", "BTW"),
-                                                  const MapEntry(
-                                                      "Lower", "LOL(<)"),
-                                                  const MapEntry(
-                                                      "Higher", "HIM(>)"),
-                                                  const MapEntry(
-                                                      "Actual", "Actual"),
-                                                ],
-                                                onChangeinside: (d, k) {
-                                                  P6INSPECTIONstdNvar_FINAL
-                                                      .SPECIFICATIONveOB
-                                                      .condition = d;
-                                                  setState(() {});
-                                                },
-                                                value: P6INSPECTIONstdNvar_FINAL
-                                                    .SPECIFICATIONveOB
-                                                    .condition,
-                                                height: 40,
+                                            if (P6INSPECTIONstdNvar_FINAL
+                                                .SPECIFICATIONveOB.condition
+                                                .contains(
+                                                    "SPECIFICATION-")) ...[
+                                              SizedBox(
                                                 width: 200,
+                                                child: AdvanceDropDown(
+                                                  imgpath:
+                                                      'assets/icons/icon-down_4@3x.png',
+                                                  listdropdown:
+                                                      P6INSPECTIONstdNvar_FINAL
+                                                          .List_SPECIFICATIONt,
+                                                  onChangeinside: (d, k) {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .SPECIFICATION = d;
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .SPECIFICATIONstr = k;
+                                                  },
+                                                  value:
+                                                      P6INSPECTIONstdNvar_FINAL
+                                                          .SPECIFICATION,
+                                                  height: 40,
+                                                  width: 200,
+                                                ),
                                               ),
-                                            ),
+                                            ] else ...[
+                                              SizedBox(
+                                                width: 200,
+                                                child: AdvanceDropDown(
+                                                  imgpath:
+                                                      'assets/icons/icon-down_4@3x.png',
+                                                  listdropdown: [
+                                                    MapEntry("", ""),
+                                                    const MapEntry("-", "-"),
+                                                    const MapEntry(
+                                                        "BTW", "BTW"),
+                                                    const MapEntry(
+                                                        "Lower", "LOL(<)"),
+                                                    const MapEntry(
+                                                        "Higher", "HIM(>)"),
+                                                    const MapEntry(
+                                                        "Actual", "Actual"),
+                                                  ],
+                                                  onChangeinside: (d, k) {
+                                                    P6INSPECTIONstdNvar_FINAL
+                                                        .SPECIFICATIONveOB
+                                                        .condition = d;
+                                                    setState(() {});
+                                                  },
+                                                  value:
+                                                      P6INSPECTIONstdNvar_FINAL
+                                                          .SPECIFICATIONveOB
+                                                          .condition,
+                                                  height: 40,
+                                                  width: 200,
+                                                ),
+                                              ),
+                                            ],
                                             if (P6INSPECTIONstdNvar_FINAL
                                                     .SPECIFICATIONveOB
                                                     .condition ==
@@ -1620,6 +1757,7 @@ class _INSFINALState extends State<INSFINAL> {
                                           ],
                                         ],
                                       ),
+
                                       UNIT: "UNIT",
                                       WIDGETUNIT: AdvanceDropDown(
                                         imgpath:
@@ -1654,6 +1792,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1703,6 +1842,7 @@ class _INSFINALState extends State<INSFINAL> {
                                                   imgpath:
                                                       'assets/icons/icon-down_4@3x.png',
                                                   listdropdown: [
+                                                    MapEntry("", ""),
                                                     MapEntry("-", "-"),
                                                     MapEntry("AQL", "YES"),
                                                     MapEntry("%", "Percen"),
@@ -1822,6 +1962,28 @@ class _INSFINALState extends State<INSFINAL> {
                                         height: 40,
                                         width: 400,
                                       ),
+                                      CORStype: "CORStype",
+                                      WIDGETCORStype: AdvanceDropDown(
+                                        // isEnable: true,
+                                        imgpath:
+                                            'assets/icons/icon-down_4@3x.png',
+                                        listdropdown: [
+                                          MapEntry("", ""),
+                                          MapEntry("-", "-"),
+                                          MapEntry("YES", "YES"),
+                                          MapEntry("NO", "NO")
+                                        ],
+                                        onChangeinside: (d, k) {
+                                          setState(() {
+                                            P6INSPECTIONstdNvar_FINAL.CORStype =
+                                                d;
+                                          });
+                                        },
+                                        value:
+                                            P6INSPECTIONstdNvar_FINAL.CORStype,
+                                        height: 40,
+                                        width: 80,
+                                      ),
 
                                       SWreport: "SWreport",
                                       WIDGETSWreport: AdvanceDropDown(
@@ -1829,6 +1991,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1853,6 +2016,7 @@ class _INSFINALState extends State<INSFINAL> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("YES", "YES"),
                                               MapEntry("NO", "NO")
@@ -1900,6 +2064,7 @@ class _INSFINALState extends State<INSFINAL> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO"),
@@ -1918,7 +2083,7 @@ class _INSFINALState extends State<INSFINAL> {
 
                                       //--------------GAS
                                       CONVERSE: "CONVERSE",
-                                      CORStype: "CORStype",
+                                      // CORStype: "CORStype",
                                       FORMULA: "FORMULA",
                                       SCMARKtype: "SCMARKtype",
                                       IMGreaddata: "IMGreaddata",

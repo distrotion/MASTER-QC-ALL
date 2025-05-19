@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../bloc/BlocEvent/LoginEvent.dart';
 import '../../data/global.dart';
 import '../../mainBody.dart';
+import '../../page/06INSPECTIONstdN/P6INSPECTIONstdNvar.dart';
 import '../../page/page1.dart';
 import '../../page/page10.dart';
 import '../../page/page11.dart';
@@ -12,6 +13,7 @@ import '../../page/page3.dart';
 import '../../page/page4.dart';
 import '../../page/page5.dart';
 import '../../page/page6.dart';
+import '../../page/page7.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;
@@ -89,74 +91,76 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
         //   page: Page1(),
         //   Lv: 1,
         // ),
-        if (serverGB != '') ...[
-          if (USERDATA.UserLV > 51) ...[
-            InkWell(
-              onTap: () {
-                setState(() {
-                  if (menupop) {
-                    menupop = false;
-                  } else {
-                    menupop = true;
-                  }
-                });
-              },
-              child: SizedBox(
-                height: 50,
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            right: 6.0, left: 6, top: 4.0, bottom: 4.0),
-                        child: Container(
-                          height: 24,
-                          width: 24,
-                          child: Icon(
-                            menupop
-                                ? Icons.arrow_drop_up_outlined
-                                : Icons.arrow_drop_down_outlined,
-                            color: Colors.white,
+        if (USERDATA.MASTER != '') ...[
+          if (serverGB != '') ...[
+            if (USERDATA.UserLV > 51) ...[
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    if (menupop) {
+                      menupop = false;
+                    } else {
+                      menupop = true;
+                    }
+                  });
+                },
+                child: SizedBox(
+                  height: 50,
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              right: 6.0, left: 6, top: 4.0, bottom: 4.0),
+                          child: Container(
+                            height: 24,
+                            width: 24,
+                            child: Icon(
+                              menupop
+                                  ? Icons.arrow_drop_up_outlined
+                                  : Icons.arrow_drop_down_outlined,
+                              color: Colors.white,
+                            ),
+                            // decoration: BoxDecoration(
+                            //     image: DecorationImage(
+                            //         image: AssetImage(getShowHidePassword_ImgPath()),
+                            //         fit: BoxFit.fitHeight))
                           ),
-                          // decoration: BoxDecoration(
-                          //     image: DecorationImage(
-                          //         image: AssetImage(getShowHidePassword_ImgPath()),
-                          //         fit: BoxFit.fitHeight))
                         ),
-                      ),
-                      const Text(
-                        "MASTER MENU",
-                        style: TextStyle(
-                          fontFamily: 'Mitr',
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w300,
-                          fontStyle: FontStyle.normal,
-                          letterSpacing: 0,
+                        const Text(
+                          "MASTER MENU",
+                          style: TextStyle(
+                            fontFamily: 'Mitr',
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            letterSpacing: 0,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            if (menupop) ...[
-              menu_sub(
-                name: "INCOMMING",
-                page: Page1(),
-                Lv: 1,
-              ),
-              menu_sub(
-                name: "INPROCESS",
-                page: Page3(),
-                Lv: 1,
-              ),
-              menu_sub(
-                name: "FINAL",
-                page: Page2(),
-                Lv: 1,
-              ),
+              if (menupop) ...[
+                menu_sub(
+                  name: "INCOMMING",
+                  page: Page1(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "INPROCESS",
+                  page: Page3(),
+                  Lv: 1,
+                ),
+                menu_sub(
+                  name: "FINAL",
+                  page: Page2(),
+                  Lv: 1,
+                ),
+              ],
             ],
           ],
 
@@ -170,16 +174,26 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
           //   page: Page4(),
           //   Lv: 1,
           // ),
-          menu_normal(
-            name: "MATCP",
-            page: Page4(),
-            Lv: 1,
-          ),
-          menu_normal(
-            name: "INSPECTION STD",
-            page: Page6(),
-            Lv: 1,
-          ),
+          if (USERDATA.MASTER != '') ...[
+            menu_normal(
+              name: "MATCP",
+              page: Page4(),
+              Lv: 1,
+            ),
+            if (P6INSPECTIONstdNvar_BASIC.CP != '' &&
+                P6INSPECTIONstdNvar_BASIC.CP != '-') ...[
+              menu_normal(
+                name: "INSPECTION STD",
+                page: Page6(),
+                Lv: 1,
+              ),
+            ],
+            menu_normal(
+              name: "Graph",
+              page: Page7(),
+              Lv: 1,
+            ),
+          ],
           menu_normal(
             name: "Signature",
             page: Page11(),

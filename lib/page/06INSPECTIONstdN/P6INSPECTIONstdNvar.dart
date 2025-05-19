@@ -15,6 +15,41 @@ class P6INSPECTIONstdNvar_BASIC {
   static int FPint = 0;
   static int LPint = 0;
   static String PICUPLOAD = "";
+
+  static String reportset = "-";
+  static String logoset = "-";
+
+  static List<MapEntry<String, String>> reportlist = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> logolist = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+
+  //USERDATA.MASTER
+  static List<MapEntry<String, String>> NMlist = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> HESISNreport = [
+    MapEntry("", ""),
+    MapEntry("-", "-"),
+    MapEntry("ACT2", "ACT2"),
+    MapEntry("REPORT", "REPORT"),
+    MapEntry("STDtest", "STDtest"),
+    MapEntry("Re_Dia", "Re_Dia"),
+  ];
+  static List<MapEntry<String, String>> HESISNlogo = [
+    MapEntry("", ""),
+    MapEntry("-", "-"),
+    MapEntry("TYPE01", "1"),
+    MapEntry("ihara", "2"),
+    MapEntry("TYPE03", "3"),
+    MapEntry("KJN", "4"),
+    MapEntry("KMT", "5"),
+  ];
 }
 
 // class P6INSPECTIONstdNvar_INPROCESS {
@@ -85,28 +120,59 @@ class P6INSPECTIONstdNvar_FINAL {
 
   static String shape = "-";
 
+  static String CORStype = "-";
+
   static bool POP = false;
   //----------------------------
-  static List<MapEntry<String, String>> List_ITEMs = [MapEntry("-", "-")];
-  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
-  static List<MapEntry<String, String>> List_SCMARK = YESNO;
-  static List<MapEntry<String, String>> List_METHOD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_LOAD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_GT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+  static List<MapEntry<String, String>> List_ITEMs = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_FREQUENCY = [MapEntry("-", "-")];
+  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
+  static List<MapEntry<String, String>> List_SCMARK = YESNO;
+  static List<MapEntry<String, String>> List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_LOAD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_GT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   static List<MapEntry<String, String>> List_IMGreaddata = MethodePIC;
   static List<MapEntry<String, String>> List_SWreport = YESNO;
   static List<MapEntry<String, String>> List_IMGno = NUM14;
-  static List<MapEntry<String, String>> List_CORETYPE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_CALCULATE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+  static List<MapEntry<String, String>> List_CORETYPE = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_COMMENT = [MapEntry("-", "-")];
+  static List<MapEntry<String, String>> List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   static String CALCULATEp = "-";
 
@@ -170,26 +236,55 @@ class P6INSPECTIONstdNvar_INCOMMING {
 
   static bool POP = false;
   //----------------------------
-  static List<MapEntry<String, String>> List_ITEMs = [MapEntry("-", "-")];
-  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
-  static List<MapEntry<String, String>> List_SCMARK = YESNO;
-  static List<MapEntry<String, String>> List_METHOD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_LOAD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_GT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+  static List<MapEntry<String, String>> List_ITEMs = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_FREQUENCY = [MapEntry("-", "-")];
+  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
+  static List<MapEntry<String, String>> List_SCMARK = YESNO;
+  static List<MapEntry<String, String>> List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_LOAD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_GT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   static List<MapEntry<String, String>> List_IMGreaddata = MethodePIC;
   static List<MapEntry<String, String>> List_SWreport = YESNO;
   static List<MapEntry<String, String>> List_IMGno = NUM14;
-  static List<MapEntry<String, String>> List_CORETYPE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_CALCULATE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+  static List<MapEntry<String, String>> List_CORETYPE = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_COMMENT = [MapEntry("-", "-")];
+  static List<MapEntry<String, String>> List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   static String CALCULATEp = "-";
 
@@ -256,26 +351,55 @@ class P6INSPECTIONstdNvar_INPROCESS {
 
   static bool POP = false;
   //----------------------------
-  static List<MapEntry<String, String>> List_ITEMs = [MapEntry("-", "-")];
-  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
-  static List<MapEntry<String, String>> List_SCMARK = YESNO;
-  static List<MapEntry<String, String>> List_METHOD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_LOAD = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_GT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+  static List<MapEntry<String, String>> List_ITEMs = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_FREQUENCY = [MapEntry("-", "-")];
+  static List<P6List_ITEMs_SET_Class> List_ITEMs_set = [];
+  static List<MapEntry<String, String>> List_SCMARK = YESNO;
+  static List<MapEntry<String, String>> List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_LOAD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_GT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   static List<MapEntry<String, String>> List_IMGreaddata = MethodePIC;
   static List<MapEntry<String, String>> List_SWreport = YESNO;
   static List<MapEntry<String, String>> List_IMGno = NUM14;
-  static List<MapEntry<String, String>> List_CORETYPE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_CALCULATE = [MapEntry("-", "-")];
-  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+  static List<MapEntry<String, String>> List_CORETYPE = [
+    MapEntry("", ""),
     MapEntry("-", "-")
   ];
-  static List<MapEntry<String, String>> List_COMMENT = [MapEntry("-", "-")];
+  static List<MapEntry<String, String>> List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  static List<MapEntry<String, String>> List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   static String CALCULATEp = "-";
 
@@ -300,6 +424,7 @@ class P6List_ITEMs_SET_Class {
 }
 
 const List<MapEntry<String, String>> NUM14 = [
+  MapEntry("", ""),
   MapEntry("-", "-"),
   MapEntry("1", "1"),
   MapEntry("2", "2"),
@@ -308,12 +433,14 @@ const List<MapEntry<String, String>> NUM14 = [
 ];
 
 const List<MapEntry<String, String>> MethodePIC = [
+  MapEntry("", ""),
   MapEntry("-", "-"),
   MapEntry("Attack Pic.", "YES"),
   MapEntry("NO Picture", "NO"),
 ];
 
 const List<MapEntry<String, String>> YESNO = [
+  MapEntry("", ""),
   MapEntry("-", "-"),
   MapEntry("YES", "YES"),
   MapEntry("NO", "NO"),
@@ -393,22 +520,43 @@ P6ClearFINAL() {
 
   // P6INSPECTIONstdNvar_FINAL.POP = false;
   //----------------------------
-  P6INSPECTIONstdNvar_FINAL.List_ITEMs = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_ITEMs = [MapEntry("", ""), MapEntry("-", "-")];
   P6INSPECTIONstdNvar_FINAL.List_ITEMs_set = [];
   P6INSPECTIONstdNvar_FINAL.List_SCMARK = YESNO;
-  P6INSPECTIONstdNvar_FINAL.List_METHOD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_LOAD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_GT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_UNIT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_UNIT_CONVERST = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_FREQUENCY = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_FINAL.List_LOAD = [MapEntry("", ""), MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_GT = [MapEntry("", ""), MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_UNIT = [MapEntry("", ""), MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_FINAL.List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   P6INSPECTIONstdNvar_FINAL.List_IMGreaddata = MethodePIC;
   P6INSPECTIONstdNvar_FINAL.List_SWreport = YESNO;
   P6INSPECTIONstdNvar_FINAL.List_IMGno = NUM14;
-  P6INSPECTIONstdNvar_FINAL.List_CORETYPE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_CALCULATE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_SPECIFICATIONt = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_FINAL.List_COMMENT = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_FINAL.List_CORETYPE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_FINAL.List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_FINAL.List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_FINAL.List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   P6INSPECTIONstdNvar_FINAL.CALCULATEp = "-";
   // P6INSPECTIONstdNvar_FINAL.PICUPLOAD = "";
@@ -479,22 +627,55 @@ P6ClearINCOMMING() {
 
   // P6INSPECTIONstdNvar_INCOMMING.POP = false;
   //----------------------------
-  P6INSPECTIONstdNvar_INCOMMING.List_ITEMs = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INCOMMING.List_ITEMs = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   P6INSPECTIONstdNvar_INCOMMING.List_ITEMs_set = [];
   P6INSPECTIONstdNvar_INCOMMING.List_SCMARK = YESNO;
-  P6INSPECTIONstdNvar_INCOMMING.List_METHOD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_LOAD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_GT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_UNIT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_UNIT_CONVERST = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_FREQUENCY = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INCOMMING.List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_LOAD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_GT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_UNIT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   P6INSPECTIONstdNvar_INCOMMING.List_IMGreaddata = MethodePIC;
   P6INSPECTIONstdNvar_INCOMMING.List_SWreport = YESNO;
   P6INSPECTIONstdNvar_INCOMMING.List_IMGno = NUM14;
-  P6INSPECTIONstdNvar_INCOMMING.List_CORETYPE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_CALCULATE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_SPECIFICATIONt = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INCOMMING.List_COMMENT = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INCOMMING.List_CORETYPE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INCOMMING.List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   P6INSPECTIONstdNvar_INCOMMING.CALCULATEp = "-";
   // P6INSPECTIONstdNvar_INCOMMING.PICUPLOAD = "";
@@ -582,22 +763,55 @@ P6ClearINPROCESS() {
 
   // P6INSPECTIONstdNvar_INCOMMING.POP = false;
   //----------------------------
-  P6INSPECTIONstdNvar_INPROCESS.List_ITEMs = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INPROCESS.List_ITEMs = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   P6INSPECTIONstdNvar_INPROCESS.List_ITEMs_set = [];
   P6INSPECTIONstdNvar_INPROCESS.List_SCMARK = YESNO;
-  P6INSPECTIONstdNvar_INPROCESS.List_METHOD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_LOAD = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_GT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_UNIT = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_UNIT_CONVERST = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_FREQUENCY = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INPROCESS.List_METHOD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_LOAD = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_GT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_UNIT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_UNIT_CONVERST = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_FREQUENCY = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
   P6INSPECTIONstdNvar_INPROCESS.List_IMGreaddata = MethodePIC;
   P6INSPECTIONstdNvar_INPROCESS.List_SWreport = YESNO;
   P6INSPECTIONstdNvar_INPROCESS.List_IMGno = NUM14;
-  P6INSPECTIONstdNvar_INPROCESS.List_CORETYPE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_CALCULATE = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_SPECIFICATIONt = [MapEntry("-", "-")];
-  P6INSPECTIONstdNvar_INPROCESS.List_COMMENT = [MapEntry("-", "-")];
+  P6INSPECTIONstdNvar_INPROCESS.List_CORETYPE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_CALCULATE = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_SPECIFICATIONt = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
+  P6INSPECTIONstdNvar_INPROCESS.List_COMMENT = [
+    MapEntry("", ""),
+    MapEntry("-", "-")
+  ];
 
   P6INSPECTIONstdNvar_INPROCESS.CALCULATEp = "-";
   // P6INSPECTIONstdNvar_INCOMMING.PICUPLOAD = "";

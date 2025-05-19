@@ -8,6 +8,7 @@ import 'page2.dart';
 import 'page4.dart';
 import 'page5.dart';
 import 'page6.dart';
+import 'page7.dart';
 
 bool isChecked = false;
 
@@ -16,8 +17,8 @@ class Page0 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page0Body();
-    // return Page6();
+    // return Page0Body();
+    return Page7();
   }
 }
 

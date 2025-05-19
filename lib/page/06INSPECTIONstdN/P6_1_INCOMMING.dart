@@ -52,10 +52,11 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                 Spacer(),
                 InkWell(
                   onTap: () {
+                    print("------->ss");
                     P6INSPECTION_INCOMMING_GET_STEP1(
                             P6INSPECTIONstdNvar_BASIC.CP)
                         .then((dynamic result) {
-                      // print(result);
+                      print(result);
                       P6ClearINCOMMING();
                       if (result['ITEMs'] != null) {
                         if (result['ITEMs'].length > 0) {
@@ -235,6 +236,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                   _Mdata.INCOMMING[i].seq;
                               //---------------------
                               P6INSPECTIONstdNvar_INCOMMING.List_ITEMs = [
+                                MapEntry("", ""),
                                 MapEntry("-", "-")
                               ];
                               P6INSPECTIONstdNvar_INCOMMING.List_ITEMs.add(
@@ -876,6 +878,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("Kcon.", "1"),
                                               MapEntry("Kvar.", "2")
@@ -947,6 +950,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                               imgpath:
                                                   'assets/icons/icon-down_4@3x.png',
                                               listdropdown: [
+                                                MapEntry("", ""),
                                                 MapEntry("-", "-"),
                                                 MapEntry("TYPE 1", "1"),
                                                 MapEntry("TYPE 2", "2")
@@ -1099,6 +1103,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                                 imgpath:
                                                     'assets/icons/icon-down_4@3x.png',
                                                 listdropdown: [
+                                                  MapEntry("", ""),
                                                   const MapEntry("-", "-"),
                                                   const MapEntry("BTW", "BTW"),
                                                   const MapEntry(
@@ -1335,6 +1340,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1386,6 +1392,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                                   imgpath:
                                                       'assets/icons/icon-down_4@3x.png',
                                                   listdropdown: [
+                                                    MapEntry("", ""),
                                                     MapEntry("-", "-"),
                                                     MapEntry("AQL", "YES"),
                                                   ],
@@ -1517,6 +1524,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO")
@@ -1541,6 +1549,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                             imgpath:
                                                 'assets/icons/icon-down_4@3x.png',
                                             listdropdown: [
+                                              MapEntry("", ""),
                                               MapEntry("-", "-"),
                                               MapEntry("YES", "YES"),
                                               MapEntry("NO", "NO")
@@ -1591,6 +1600,7 @@ class _INSINCOMMINGState extends State<INSINCOMMING> {
                                         imgpath:
                                             'assets/icons/icon-down_4@3x.png',
                                         listdropdown: [
+                                          MapEntry("", ""),
                                           MapEntry("-", "-"),
                                           MapEntry("YES", "YES"),
                                           MapEntry("NO", "NO"),
